@@ -11,7 +11,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
+    - title: PhD student
       institution: UCA
       year: 2021-now
       description:
@@ -31,22 +31,18 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Teaching assistant
+    - title: Teaching assistant in Mathematics
       institution: UCA
       year: 2021-now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Mathématiques S2 tutorials (for maths students).
+        - Outils Maths 2 tutorials (for all scientific students).
     - title: Tutoring for 1st year students in Mathematics
       institution: UCA
       year: 2020-2021
       description:
-        - Description 1.
-        - Description 2.
+        - Help students with their maths homework.
+        - Answer their questions.
 
 
 - title: Academic Interests
@@ -54,16 +50,16 @@
   contents:
     - title: Artificial intelligence.
       items:
-        - Description 1.
-        - Description 2.
-    - title: Markov Chain Monte Carlo methods.
+        - Generative models.
+        - Physics-driven ML architectures.
+    - title: MCMC/PDMP methods.
       items:
-        - Description 1.
-        - Description 2.
+        - Theoretical properties of HMC.
+        - Deploying PDMP algorithms for Cosmology.
     - title: Cosmology.
       items:
-        - Description 1.
-        - Description 2.
+        - using modern statistical methods to understand the large-scale structure of the Universe.
+        - theoretical comprehension and practical implementation of the algorithms at stake.
 
 - title: Other Interests
   type: list
