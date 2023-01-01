@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 4th July 1997
     - name: Languages
-      value: French, English
+      value: French (native), English (advanced), Spanish (intermediate)
 
 - title: Education
   type: time_table
@@ -15,18 +15,15 @@
       institution: UCA
       year: 2021-now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - 'Mathematical aspects in statistical inference of initial cosmological parameters through forward-modeling'.
+        - Studying, developing and deploying sampling algorithms.
+        - Interdisciplinary collaboration (Mathematics and Cosmology) within the Aquila consortium.
     - title: Master's degree in Mathematics
       institution: UCA
       year: 2019-2021
       description:
-        - Description 1.
-        - Description 2.
+        - 1st year with various courses in both applied and fundamental mathematics.
+        - specialization in Partial Differential Equations in 2nd year.
 
 - title: Experience
   type: time_table
