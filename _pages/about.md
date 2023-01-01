@@ -6,11 +6,11 @@ subtitle: <a href='#'>Laboratoire de Mathématiques Blaise Pascal (CNRS, Univers
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: vs.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Bâtiment de Mathématiques, Bureau 124</p>
-    <p>123 Campus des Cézeaux</p>
+    <p>Bureau 124, Bât. de Mathématiques</p>
+    <p>Campus des Cézeaux</p>
     <p>63170 Aubière, FRANCE</p>
 
 news: false  # includes a list of news items
