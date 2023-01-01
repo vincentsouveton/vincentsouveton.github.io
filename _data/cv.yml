@@ -23,7 +23,7 @@
       year: 2019-2021
       description:
         - 1st year with various courses in both applied and fundamental mathematics.
-        - specialization in Partial Differential Equations in 2nd year.
+        - Specialization in Partial Differential Equations in 2nd year.
 
 - title: Experience
   type: time_table
@@ -55,8 +55,8 @@
         - Deploying PDMP algorithms for Cosmology.
     - title: Cosmology.
       items:
-        - using modern statistical methods to understand the large-scale structure of the Universe.
-        - theoretical comprehension and practical implementation of the algorithms at stake.
+        - Using modern statistical methods to understand the large-scale structure of the Universe.
+        - Theoretical comprehension and practical implementation of the algorithms at stake.
 
 - title: Other Interests
   type: list
