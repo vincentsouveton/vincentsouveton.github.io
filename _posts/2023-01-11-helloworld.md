@@ -1,5 +1,5 @@
 ---
-layout: welcome
+layout: distill
 title: Hello world
 description: a warm welcome to my personal blog
 giscus_comments: false
