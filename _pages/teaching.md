@@ -15,10 +15,10 @@ TD pour L1 Mathématiques
 - Applications linéaires
 - Suites
 
-Sujets et corrigés des examens 2021-2022 : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/EI-2021-22.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des examens 2021-2022 : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/EI-2021-22.pdf){:target="_blank" rel="noopener"}, [examen terminal](https://vincentsouveton.github.io/assets/cours/maths2/ET-2021-22.pdf){:target="_blank" rel="noopener"}
 
 
-Sujets des contrôles continus 2021-2022 :
+Sujets des contrôles continus 2021-2022 : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/cc1.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/cc2.pdf){:target="_blank" rel="noopener"}, [cc3](https://vincentsouveton.github.io/assets/cours/maths2/cc3.pdf){:target="_blank" rel="noopener"}
 
 
 
