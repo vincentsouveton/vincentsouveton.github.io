@@ -47,11 +47,11 @@
     - title: Artificial intelligence.
       items:
         - Generative models.
-        - Physics-driven ML architectures.
+        - Physics-driven Machine Learning architectures.
     - title: MCMC/PDMP methods.
       items:
-        - Theoretical properties of HMC.
-        - Deploying PDMP algorithms for Cosmology.
+        - Theoretical properties of Hamiltonian Monte Carlo.
+        - Deploying Piecewise Deterministic Markov Processes algorithms for Cosmology.
     - title: Cosmology.
       items:
         - Using modern statistical methods to understand the large-scale structure of the Universe.
