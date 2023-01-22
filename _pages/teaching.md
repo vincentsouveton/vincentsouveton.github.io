@@ -8,8 +8,7 @@ nav_order: 5
 ---
 
 
-## Mathématiques S2
-TD pour L1 Mathématiques
+## Mathématiques S2 (L1 Maths)
 - Comparaisons asymptotiques, développement limités
 - Espaces vectoriels
 - Applications linéaires
@@ -22,8 +21,7 @@ Sujets des contrôles continus 2021-2022 : [cc1](https://vincentsouveton.github.
 
 
 
-## Outils Mathématiques 2
-Cours/TD pour L1 scientifiques
+## Outils Mathématiques 2 (L1 Science)
 - Raisonnement, ensembles, dénombrement OU Matrices et systèmes linéaires
 - Fonctions de plusieurs variables
 - Equations différentielles
