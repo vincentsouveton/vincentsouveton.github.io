@@ -9,7 +9,7 @@ nav_order: 5
 
 
 ## Mathématiques S2 (L1 Maths)
-- Comparaisons asymptotiques, développement limités
+- Comparaisons asymptotiques, développements limités
 - Espaces vectoriels
 - Applications linéaires
 - Suites
