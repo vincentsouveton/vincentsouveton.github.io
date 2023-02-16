@@ -12,14 +12,14 @@
   type: time_table
   contents:
     - title: PhD student
-      institution: UCA
+      institution: Université Clermont Auvergne
       year: 2021-now
       description:
         - <u>Title:</u> Mathematical aspects in statistical inference of initial cosmological parameters through forward-modeling.
         - Studying, developing and deploying sampling algorithms.
         - Interdisciplinary collaboration (Mathematics and Cosmology) within the Aquila consortium.
     - title: Master's degree in Mathematics
-      institution: UCA
+      institution: Université Clermont Auvergne
       year: 2019-2021
       description:
         - 1st year with various courses in both applied and fundamental mathematics.
@@ -29,13 +29,13 @@
   type: time_table
   contents:
     - title: Teaching assistant in Mathematics
-      institution: UCA
+      institution: Université Clermont Auvergne
       year: 2021-now
       description:
         - Mathématiques S2 tutorials (for 1st year maths students).
         - Outils Mathématiques 2 tutorials (for all 1st yeat science students).
     - title: Tutoring for 1st year students in Mathematics
-      institution: UCA
+      institution: Université Clermont Auvergne
       year: 2020-2021
       description:
         - Help students with their maths homework.
@@ -48,10 +48,10 @@
       items:
         - Generative models.
         - Physics-driven Machine Learning architectures.
-    - title: MCMC/PDMP methods.
+    - title: MCMC/PDMC methods.
       items:
         - Theoretical properties of Hamiltonian Monte Carlo.
-        - Deploying Piecewise Deterministic Markov Processes algorithms for Cosmology.
+        - Deploying Piecewise Deterministic Monte Carlo algorithms for Cosmology.
     - title: Cosmology.
       items:
         - Using modern statistical methods to understand the large-scale structure of the Universe.
