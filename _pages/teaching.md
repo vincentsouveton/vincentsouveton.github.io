@@ -17,7 +17,7 @@ nav_order: 5
 ##### 2022-2023
 Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD1.pdf){:target="_blank" rel="noopener"}, [td2 (provisoire)](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD2.pdf){:target="_blank" rel="noopener"}
 
-Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1.pdf){:target="_blank" rel="noopener"}, [cc1bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1bis.pdf){:target="_blank" rel="noopener"}
 
 ##### 2021-2022
 Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/EI-2021-22.pdf){:target="_blank" rel="noopener"}, [examen terminal](https://vincentsouveton.github.io/assets/cours/maths2/ET-2021-22.pdf){:target="_blank" rel="noopener"}
