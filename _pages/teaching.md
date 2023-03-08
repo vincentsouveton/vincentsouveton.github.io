@@ -22,11 +22,13 @@ Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.gith
 ##### 2021-2022
 Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/EI-2021-22.pdf){:target="_blank" rel="noopener"}, [examen terminal](https://vincentsouveton.github.io/assets/cours/maths2/ET-2021-22.pdf){:target="_blank" rel="noopener"}
 
-Sujets des contrôles continus 2021-2022 : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/cc1.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/cc2.pdf){:target="_blank" rel="noopener"}, [cc3](https://vincentsouveton.github.io/assets/cours/maths2/cc3.pdf){:target="_blank" rel="noopener"}
+Sujets des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/cc1.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/cc2.pdf){:target="_blank" rel="noopener"}, [cc3](https://vincentsouveton.github.io/assets/cours/maths2/cc3.pdf){:target="_blank" rel="noopener"}
 
 
 
 ### Outils Mathématiques 2 (L1 Science)
 - Raisonnement, ensembles, dénombrement OU Matrices et systèmes linéaires
-- Fonctions de plusieurs variables
 - Equations différentielles
+- Fonctions de plusieurs variables
+
+Quelques [notes complémentaires](https://vincentsouveton.github.io/assets/cours/maths2/NotesEquaDiffs.pdf){:target="_blank" rel="noopener"} (complétées au fur et à mesure) sur les équations différentielles.
