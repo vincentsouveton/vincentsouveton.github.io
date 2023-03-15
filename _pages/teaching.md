@@ -31,4 +31,4 @@ Sujets des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/
 - Equations différentielles
 - Fonctions de plusieurs variables
 
-Quelques [notes complémentaires](https://vincentsouveton.github.io/assets/cours/maths2/NotesEquaDiffs.pdf){:target="_blank" rel="noopener"} (complétées au fur et à mesure) sur les équations différentielles.
+Quelques notes complémentaires (complétées au fur et à mesure) sur les [équations différentielles](https://vincentsouveton.github.io/assets/cours/om2/NotesEquaDiffs.pdf){:target="_blank" rel="noopener"} et sur les [fonctions de plusieurs variables](https://vincentsouveton.github.io/assets/cours/om2/NotesFonctionsPlusieursVariables.pdf){:target="_blank" rel="noopener"}.
