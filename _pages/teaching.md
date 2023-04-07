@@ -15,7 +15,7 @@ nav_order: 5
 - Suites
 
 ##### 2022-2023
-Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD1.pdf){:target="_blank" rel="noopener"}, [td2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD2.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD1.pdf){:target="_blank" rel="noopener"}, [td2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD2.pdf){:target="_blank" rel="noopener"}, [td3](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_TD3.pdf){:target="_blank" rel="noopener"}
 
 Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_EI.pdf){:target="_blank" rel="noopener"}
 
@@ -33,4 +33,8 @@ Sujets des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/
 - Equations différentielles
 - Fonctions de plusieurs variables
 
-Quelques notes complémentaires (complétées au fur et à mesure) sur les [équations différentielles](https://vincentsouveton.github.io/assets/cours/om2/NotesEquaDiffs.pdf){:target="_blank" rel="noopener"} et sur les [fonctions de plusieurs variables](https://vincentsouveton.github.io/assets/cours/om2/NotesFonctionsPlusieursVariables.pdf){:target="_blank" rel="noopener"}.
+Sujets et corrigés d'examens Option Maths : [27/04/21](https://vincentsouveton.github.io/assets/cours/om2/270421Maths.pdf){:target="_blank" rel="noopener"}, [11/05/21](https://vincentsouveton.github.io/assets/cours/om2/110521Maths.pdf){:target="_blank" rel="noopener"},[16/06/21](https://vincentsouveton.github.io/assets/cours/om2/160621Maths.pdf){:target="_blank" rel="noopener"}
+
+Sujets et corrigés d'examens Option Sans Maths : [27/04/21](https://vincentsouveton.github.io/assets/cours/om2/270421NoMaths.pdf){:target="_blank" rel="noopener"}, [11/05/21](https://vincentsouveton.github.io/assets/cours/om2/110521NoMaths.pdf){:target="_blank" rel="noopener"},[16/06/21](https://vincentsouveton.github.io/assets/cours/om2/160621NoMaths.pdf){:target="_blank" rel="noopener"}
+
+Quelques notes complémentaires sur les [équations différentielles](https://vincentsouveton.github.io/assets/cours/om2/NotesEquaDiffs.pdf){:target="_blank" rel="noopener"} et sur les [fonctions de plusieurs variables](https://vincentsouveton.github.io/assets/cours/om2/NotesFonctionsPlusieursVariables.pdf){:target="_blank" rel="noopener"}.
