@@ -33,7 +33,7 @@
       year: 2021-now
       description:
         - Mathématiques S2 tutorials (for 1st year maths students).
-        - Outils Mathématiques 2 tutorials (for all 1st yeat science students).
+        - Outils Mathématiques 2 tutorials (for all 1st year science students).
     - title: Tutoring for 1st year students in Mathematics
       institution: Université Clermont Auvergne
       year: 2020-2021
@@ -48,7 +48,7 @@
       items:
         - Generative models.
         - Physics-driven Machine Learning architectures.
-    - title: MCMC/PDMC methods.
+    - title: Non-reversible Monte Carlo methods.
       items:
         - Theoretical properties of Hamiltonian Monte Carlo.
         - Deploying Piecewise Deterministic Monte Carlo algorithms for Cosmology.
