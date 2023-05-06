@@ -19,7 +19,7 @@ Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io
 
 Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_EI.pdf){:target="_blank" rel="noopener"}
 
-Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1.pdf){:target="_blank" rel="noopener"}, [cc1bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1bis.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC2.pdf){:target="_blank" rel="noopener"}, [cc2bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC2bis.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1.pdf){:target="_blank" rel="noopener"}, [cc1bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC1bis.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC2.pdf){:target="_blank" rel="noopener"}, [cc2bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC2bis.pdf){:target="_blank" rel="noopener"}, [cc3](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2223_CC3.pdf){:target="_blank" rel="noopener"}
 
 ##### 2021-2022
 Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/EI-2021-22.pdf){:target="_blank" rel="noopener"}, [examen terminal](https://vincentsouveton.github.io/assets/cours/maths2/ET-2021-22.pdf){:target="_blank" rel="noopener"}
