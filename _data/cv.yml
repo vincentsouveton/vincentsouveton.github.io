@@ -46,20 +46,21 @@
   contents:
     - title: Artificial intelligence.
       items:
-        - Generative models.
+        - Generative models (Normalizing Flows, GANs, etc.).
         - Physics-driven Machine Learning architectures.
-    - title: Non-reversible Monte Carlo methods.
+    - title: Monte Carlo methods.
       items:
         - Theoretical properties of Hamiltonian Monte Carlo.
-        - Deploying Piecewise Deterministic Monte Carlo algorithms for Cosmology.
+        - Non-reversible Monte Carlo algorithms (Piecewise Deterministic Monte Carlo) for Cosmology.
     - title: Cosmology.
       items:
-        - Using modern statistical methods to understand the large-scale structure of the Universe.
-        - Theoretical comprehension and practical implementation of the algorithms at stake.
+        - Probabilistic characterization of the large-scale structure of the Universe.
+        - Implementing state-of-the-art samplers for reconstructing its initial conditions.
 
 - title: Other Interests
   type: list
   contents:
+    - Staring at the sky (with or without a telescope)
     - Sci-Fi novels ('La Horde du Contrevent' by Alain Damasio is a rare treasure)
     - Prospects about the future of Humanity (I strongly recommend 'Superintelligence' by Nick Boström)
     - Netflix and Chill ('The Office', of course, but also 'Dark' and 'O.V.N.I')
