@@ -6,7 +6,7 @@
     - name: Date of Birth
       value: 4th July 1997
     - name: Languages
-      value: French (native), English (advanced), Spanish (intermediate)
+      value: French (native), English (advanced), Spanish (basis)
 
 - title: Education
   type: time_table
@@ -24,46 +24,30 @@
       description:
         - 1st year with various courses in both applied and fundamental mathematics.
         - Specialization in Partial Differential Equations in 2nd year.
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Teaching assistant in Mathematics
-      institution: Université Clermont Auvergne
-      year: 2021-now
-      description:
-        - Mathématiques S2 tutorials (for 1st year maths students).
-        - Outils Mathématiques 2 tutorials (for all 1st year science students).
-    - title: Tutoring for 1st year students in Mathematics
-      institution: Université Clermont Auvergne
-      year: 2020-2021
-      description:
-        - Help students with their maths homework.
-        - Answer their questions.
+        - 6-month research internship on an interdisciplinary project (Convexity analysis, Cosmology, MCMC methods).
 
 - title: Academic Interests
   type: nested_list
   contents:
     - title: Artificial intelligence.
       items:
-        - Generative models (Normalizing Flows, GANs, etc.).
+        - Generative models (Normalizing Flows, Diffusion models, GANs, etc.).
         - Physics-driven Machine Learning architectures.
     - title: Monte Carlo methods.
       items:
-        - Theoretical properties of Hamiltonian Monte Carlo.
-        - Non-reversible Monte Carlo algorithms (Piecewise Deterministic Monte Carlo) for Cosmology.
+        - Hamiltonian Monte Carlo.
+        - Non-reversible Monte Carlo algorithms (Piecewise Deterministic Monte Carlo).
     - title: Cosmology.
       items:
         - Probabilistic characterization of the large-scale structure of the Universe.
-        - Implementing state-of-the-art samplers for reconstructing its initial conditions.
+        - Inference of cosmological parameters.
 
 - title: Other Interests
   type: list
   contents:
     - Staring at the sky (with or without a telescope)
-    - Sci-Fi novels ('La Horde du Contrevent' by Alain Damasio is a rare treasure)
-    - Prospects about the future of Humanity (I strongly recommend 'Superintelligence' by Nick Boström)
-    - Netflix and Chill ('The Office', of course, but also 'Dark' and 'O.V.N.I')
-    - Movies (I was never disappointed by Quentin Dupieux and I can't wait for the annual Short Film Festival in Clermont)
-    - Electronic music (from Daft Punk to Thylacine and Worakls, I find the French stage amazingly talented)
+    - Sci-Fi novels ('La Horde du Contrevent' by Alain Damasio)
+    - Prospects about the future of Humanity ('Superintelligence' by Nick Boström)
+    - Series ('The Office', 'Dark' and 'O.V.N.I')
+    - Movies (I was never disappointed by Quentin Dupieux and I can't wait for the annual International Short Film Festival in Clermont)
     - ...
