@@ -16,7 +16,7 @@ nav_order: 5
 
 ##### Feuilles de TD
 
-Sujets et corrigés des feuilles de TD : [td1 (ex 1-8)](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD1.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD1.pdf){:target="_blank" rel="noopener"}
 
 ##### Examens et contrôles 2023-2024
 
