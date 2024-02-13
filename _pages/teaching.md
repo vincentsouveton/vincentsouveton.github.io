@@ -22,7 +22,7 @@ Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io
 
 Sujets et corrigés des examens : à venir !
 
-Sujets et corrigés des contrôles continus : à venir !
+Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC1.pdf){:target="_blank" rel="noopener"}, [cc1bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC1_bis.pdf){:target="_blank" rel="noopener"}
 
 ##### Examens et contrôles 2022-2023
 
