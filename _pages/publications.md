@@ -8,7 +8,7 @@ nav: true
 nav_order: 1
 ---
 
-### Preprints
+### Accepted
 
 <!-- _pages/publications.md -->
 <div class="publications">
