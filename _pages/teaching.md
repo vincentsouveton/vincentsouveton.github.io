@@ -14,13 +14,15 @@ nav_order: 5
 - Applications linéaires
 - Suites
 
+Les corrections pour cette UE ont été réalisées avec Julian Le Clainche.
+
 ##### Feuilles de TD
 
-Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD1.pdf){:target="_blank" rel="noopener"}, [td2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD2.pdf){:target="_blank" rel="noopener"}, [td3](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD3.pdf){:target="_blank" rel="noopener"}
+Sujets et corrigés des feuilles de TD : [td1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD1.pdf){:target="_blank" rel="noopener"}, [td2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD2.pdf){:target="_blank" rel="noopener"}, [td3](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD3.pdf){:target="_blank" rel="noopener"}, [td4 (ex 1-6)](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_TD4.pdf){:target="_blank" rel="noopener"}
 
 ##### Examens et contrôles 2023-2024
 
-Sujets et corrigés des examens : à venir !
+Sujets et corrigés des examens : [examen intermédiaire](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_EI.pdf){:target="_blank" rel="noopener"}
 
 Sujets et corrigés des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC1.pdf){:target="_blank" rel="noopener"}, [cc1bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC1_bis.pdf){:target="_blank" rel="noopener"}, [cc2](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC2.pdf){:target="_blank" rel="noopener"}, [cc2bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC2_bis.pdf){:target="_blank" rel="noopener"}, [cc3](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC3.pdf){:target="_blank" rel="noopener"}, [cc3bis](https://vincentsouveton.github.io/assets/cours/maths2/MathsS2_2324_CC3_bis.pdf){:target="_blank" rel="noopener"}
 
@@ -41,6 +43,8 @@ Sujets des contrôles continus : [cc1](https://vincentsouveton.github.io/assets/
 - Raisonnement, ensembles, dénombrement OU Matrices et systèmes linéaires
 - Equations différentielles
 - Fonctions de plusieurs variables
+
+Les corrections pour cette UE ont été réalisées avec Sue Claret, Léo Hahn Lecler, Clément Legrand et Emilien Zabeth.
 
 Sujets et corrigés d'examens Option Maths : [27/04/21](https://vincentsouveton.github.io/assets/cours/om2/270421Maths.pdf){:target="_blank" rel="noopener"}, [11/05/21](https://vincentsouveton.github.io/assets/cours/om2/110521Maths.pdf){:target="_blank" rel="noopener"},[16/06/21](https://vincentsouveton.github.io/assets/cours/om2/160621Maths.pdf){:target="_blank" rel="noopener"}
 
