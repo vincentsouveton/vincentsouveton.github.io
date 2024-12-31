@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: *Postdoc, CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives)* #<a href='#'>CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives)</a>.
+subtitle: Postdoc, CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives) #<a href='#'>CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives)</a>.
 
 profile:
   align: right
