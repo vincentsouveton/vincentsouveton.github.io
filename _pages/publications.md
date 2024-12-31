@@ -3,12 +3,10 @@ layout: page
 permalink: /publications/
 title: publications
 description: Publications in reversed chronological order.
-years: [2023]
+years: [2024]
 nav: true
 nav_order: 1
 ---
-
-### Accepted
 
 <!-- _pages/publications.md -->
 <div class="publications">
