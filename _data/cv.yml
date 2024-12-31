@@ -8,14 +8,24 @@
     - name: Languages
       value: French (native), English (advanced), Spanish (basis)
 
+- title: Current employment
+  type: time_table
+  contents:
+    - title: Postdoctoral researcher
+      institution: CEA
+      year: 2024-present
+      description:
+        - Development of Machine Learning methods for simulating wave propagation effects.
+        - Statistical uncertainty quantification.
+
 - title: Education
   type: time_table
   contents:
-    - title: PhD student in Applied Mathematics
-      institution: Université Clermont Auvergne
-      year: 2021-now
+    - title: Ph.D. in Applied Mathematics
+      institution: LMBP, Université Clermont Auvergne
+      year: 2021-2024
       description:
-        - <u>Title:</u> Mathematical aspects in statistical inference of initial cosmological parameters through forward-modeling.
+        - <u>Title:</u> Non-reversible and generative sampling algorithms. Application to the inference of cosmological parameters.
         - Studying, developing and deploying sampling algorithms.
         - Interdisciplinary collaboration (Mathematics and Cosmology) within the Aquila consortium.
         - Organizer of the Mathematics PhD student's seminar.
@@ -37,12 +47,14 @@
         - Generative models (Normalizing Flows, Diffusion models, GANs, etc.).
         - Physics-driven Machine Learning architectures.
         - Interpretability.
-    - title: Monte Carlo methods.
+    - title: Markov Chain Monte Carlo methods.
       items:
+        - Bayesian problems.
         - Hamiltonian Monte Carlo.
         - Non-reversible Monte Carlo algorithms (Piecewise Deterministic Monte Carlo).
-    - title: Cosmology.
+    - title: Physics applications.
       items:
+        - Wave propagation effects.
         - Probabilistic characterization of the large-scale structure of the Universe.
         - Inference of cosmological parameters.
 
@@ -52,6 +64,7 @@
     - Staring at the sky (with or without a telescope)
     - Sci-Fi novels ('La Horde du Contrevent' by Alain Damasio)
     - Prospects about the future of Humanity ('Superintelligence' by Nick Boström)
+    - Sports (Enjoying Griezmann's touch on the ball while dreaming of running a marathon)
     - Series ('The Office', 'Dark' and 'O.V.N.I')
     - Movies (I was never disappointed by Quentin Dupieux and I can't wait for the annual International Short Film Festival in Clermont)
     - ...
