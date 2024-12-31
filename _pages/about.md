@@ -2,16 +2,16 @@
 layout: about
 title: about
 permalink: /
-subtitle: Postdoc, CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives) #<a href='#'>CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives)</a>.
+subtitle: <i> Postdoc, CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives) </i> #<a href='#'>CEA (Commissariat à l'Energie Atomique et aux Energies Alternatives)</a>.
 
 profile:
   align: right
   image: vs.jpg
   image_circular: false # crops the image to make it circular
-  address: <!-- > -->
-    <!-- <p>Bureau 124, Bât. de Mathématiques</p> -->
-    <!-- <p>Campus des Cézeaux</p> -->
-    <!-- <p>63170 Aubière, FRANCE</p> -->
+  address: #>
+    # <p>Bureau 124, Bât. de Mathématiques</p>
+    # <p>Campus des Cézeaux</p>
+    # <p>63170 Aubière, FRANCE</p>
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
