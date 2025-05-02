@@ -1,0 +1,15 @@
+title: "Your Name"
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-scholar
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+scholar:
+  style: apa
+  bibliography: _bibliography/publications.bib
