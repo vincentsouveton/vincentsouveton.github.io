@@ -7,8 +7,8 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
 kramdown:
-  input: GFM
-  math_engine: mathjax
+  input: mathjax#GFM
+  #math_engine: mathjax
 
 scholar:
   style: apa
