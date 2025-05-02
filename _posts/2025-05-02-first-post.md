@@ -4,8 +4,16 @@ title: "Math in Blog"
 date: 2025-05-02
 ---
 
-This is a blog post with inline math like \( a^2 + b^2 = c^2 \) and display math:
+---
+layout: post
+title: "Math Test"
+date: 2025-05-02
+---
+
+This is inline math: $a^2 + b^2 = c^2$
+
+And display math:
 
 $$
-E = mc^2
+\\nabla \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0}
 $$
