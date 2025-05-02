@@ -1,6 +1,6 @@
 title: "Vincent Souveton"
 markdown: kramdown
-theme: minima
+#theme: minima
 plugins:
   - jekyll-scholar
   - jekyll-feed
