@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
 
-    <script>
-      window.MathJax = {
-        tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
-        svg: { fontCache: 'global' }
-      };
-    </script>
-    <script type="text/javascript" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-  </head>
-  <body>
-    {% include navbar.html %}
-    <h1>{{ page.title }}</h1>
-    <div>
-      {{ content }}
-    </div>
-  </body>
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+    nav {
+      padding: 10px;
+      background: #eee;
+      border-bottom: 1px solid #ccc;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  {% include navbar.html %}
+
+  <h1>{{ page.title }}</h1>
+
+  <div>
+    {{ content }}
+  </div>
+</body>
 </html>
