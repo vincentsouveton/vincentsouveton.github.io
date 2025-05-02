@@ -3,7 +3,7 @@ layout: page
 title: "Teaching"
 ---
 
-### Courses
+### Université Clermont Auvergne
 
-- CS101: Introduction to Computer Science (Fall 2025)
-- CS205: Advanced Algorithms (Spring 2026)
+- Outils Mathématiques 2 (L1) :
+- Mathématiques S2 (L1) : 

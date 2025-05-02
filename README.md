@@ -1,2 +1,2 @@
 # vincentsouveton.github.io
-Vincent Souvetonv's personal academic website
+Vincent Souveton's personal academic website

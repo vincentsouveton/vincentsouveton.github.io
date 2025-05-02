@@ -4,8 +4,8 @@ title: "Welcome"
 permalink: /
 ---
 
-<img src="assets/yourphoto.jpg" alt="Your photo" width="200"/>
+<img src="assets/vs0.jpg" alt="My photo" width="200"/>
 
-Hi, I'm **Your Name**, a [your title] at [your institution].
+Hi, I'm a post-doctoral researcher at CEA.
 
 Welcome to my academic website.
