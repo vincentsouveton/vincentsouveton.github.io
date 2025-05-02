@@ -1,0 +1,237 @@
+\documentclass[10pt,a4paper,french]{article}
+\usepackage{amsfonts,amsmath}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[all]{xy}
+\usepackage{variations}
+\usepackage{color}
+
+\usepackage[paper=a4paper,lmargin=80pt,rmargin=80pt,tmargin=80pt,bmargin=80pt]{geometry}
+
+
+\setlength{\oddsidemargin}{-0.6cm}
+\setlength{\evensidemargin}{-0.6cm}
+%\setlength{\topmargin}{0pt}
+%\setlength{\headheight}{0pt}[1] 8330
+%\setlength{\footskip}{0cm}
+\setlength{\textwidth}{6.5in}
+\voffset=-2cm
+\setlength{\textheight}{10in}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+\newcounter{exono}
+\newcounter{questionno}
+\newcounter{subquestionno}
+
+\newcommand\ds{\displaystyle}
+\newcommand\exo
+  {\addtocounter{exono}{1}
+   \bigbreak\textbf{Exercice \theexono.\ }
+   \setcounter{questionno}{0}}
+
+\newcommand\question
+  {\addtocounter{questionno}{1}
+   \setcounter{subquestionno}{0}
+   \medskip
+   \textbf{\thequestionno.\ }}
+
+\newcommand\subquestion
+  {\addtocounter{subquestionno}{1}
+   \smallskip
+   \textbf{\thequestionno.\thesubquestionno.\ }}
+
+\newcommand\R{{\mathbb{R}}}
+\newcommand\reel{{\mathbb{R}}}
+\newcommand\C{\mathbb{C}}
+\newcommand\N{{\mathbb{N}}}
+\newcommand\Z{{\mathbb{Z}}}
+\newcommand\Q{{\mathbb{Q}}}
+\DeclareMathOperator{\im}{{\mathrm{Im}}}
+\DeclareMathOperator{\re}{{\mathrm{Re}}}
+\DeclareMathOperator{\id}{id}
+
+\begin{document}
+
+{\sc{Université Clermont Auvergne}} \hfill Année universitaire 2021-2022 \newline UE ``Mathématiques S2'' (Z120BU01) \hfill L1 Portails scientifiques
+
+\begin{center}
+  \textbf{Examen terminal du mardi 10 mai 2022} \\
+  \textsc{Durée : 2h - Documents et mat\'eriel \'electronique interdits.}
+  \text{Le sujet est composé de questions de cours et de 3 exercices indépendants.} 
+  \text{qui peuvent être traités dans n'importe quel ordre.}
+  
+  \textbf{Toute réponse doit être justifiée ou argumentée.}
+  \text{Barême indicatif (susceptible de modifications) : Questions de cours : 20\%} 
+  \text{Ex. 1 : 30-35\%, Ex. 2 : 25-30\%, Ex. 3 :  20\%}
+\end{center}
+
+{\bf Questions de cours}
+\begin{enumerate}
+    \item \'Ecrire avec des quantificateurs la phrase mathématique suivante : 
+    
+    \og la suite $(w_n)_{n \geq 0}$ converge vers $-3$ \fg.
+    \item Soit $E$ et $F$ des espaces vectoriels et $\varphi : E \to F$ une application linéaire. 
+    \begin{enumerate}
+     \item Rappeler la d\'efinition de $\ker(\varphi)$.
+     \item Montrer que $\ker(\varphi)$ est un espace vectoriel.
+    \end{enumerate}
+    \item Soit $h : \R_4[X] \to \R^4$ une application linéaire. 
+    \begin{enumerate}
+     \item Donner (sans justification) $\dim(\R_4[X])$.
+        \item \'Enoncer le théorème du rang appliqué à $h$.
+        \item Montrer que $h$ n'est pas injective.
+    \end{enumerate}
+\end{enumerate}
+
+\exo
+On considère l'endomorphisme $f : \R^3 \to \R^3$ dont la matrice dans la base canonique (que l'on notera $\mathcal{C}$) est  $A=\begin{pmatrix} -1 & -1 & 0 \\ -2 & 9 & 4 \\ 4 & -21 & -9 \end{pmatrix}$. 
+
+On note $\id_{\R^3} : \R^3 \to \R^3$ l'endomorphisme identité de $\R^3$.
+
+On note $u_1$, $u_2$ et $u_3$ les vecteurs de $\R^3$ dont les coordonnées dans la base canonique $\mathcal{C}$ sont respectivement $\begin{pmatrix} 2 \\0 \\1 \end{pmatrix}$, $\begin{pmatrix} 1 \\-1 \\3\end{pmatrix}$ et $\begin{pmatrix} 0 \\1 \\-2 \end{pmatrix}$.
+
+\begin{enumerate}
+\item Montrer que $\mathcal{B}_1=(u_1, u_2, u_3)$ est une base de $\R^3$.
+\item Donner une base et la dimension de $\ker(f+\id_{\R^3})$. En déduire $f(u_1)$.
+\item Calculer $f(u_2)$ et $f(u_3)$. 
+%{\color{red} \item \`A quelles conditions sur les scalaires $\lambda_1,\lambda_2,\lambda_3$ le vecteur $\lambda_1u_1+\lambda_2u_2+\lambda_3u_3$ appartient à $\ker(f)$ ? En déduire que $\ker(f)=\{0_{\R^3}\}$ et que $f$ est un automorphisme.}
+\item Déterminer la matrice $B$ de $f$ dans la base $\mathcal{B}_1$. 
+\item Calculer le déterminant de la matrice $\begin{pmatrix} -1 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0 \end{pmatrix}$. En déduire que $f$ est bijective, et déterminer $\ker(f)$.
+
+On pose $g=f \circ f$ et $h=g \circ g$. 
+
+\item Calculer $B^4$. En déduire que $h=\text{id}_{\R^3}$. 
+\item Sans calcul, déterminer $A^4$ (en justifiant la réponse).
+\end{enumerate}
+
+
+\exo 
+
+Soit $a \in \left]-2, 0\right[$. On considère la suite $(u_n)_{n \geq 0}$ définie par $u_0=a$ et $u_{n+1}=\dfrac{u_n^2}2+2u_n$.
+
+Soit $p$ et $q$ les fonctions définies sur $\R$ par $p(x)=\dfrac{x^2}2+2x$ et $q(x)=p(x)-x$.
+\begin{enumerate}
+    \item \'Etudier les variations de $p$ sur $\R$, et montrer que $p(\left]-2, 0\right[)=\left]-2, 0\right[$. 
+    \item Montrer par récurrence que, pour tout $n \geq 0$, on a $u_n \in \left]-2, 0\right[$.
+    \item Montrer que pour tout $x \in \left]-2, 0\right[$, on a $q(x) \leq 0$. En déduire que la suite $(u_n)_{n \geq 0}$ est monotone.
+    \item Justifier que la suite $(u_n)_{n \geq 0}$ est convergente, et déterminer sa limite $\ell$.
+%{\color{red}
+   % \item On pose, pour $n\geq 1$, $v_n=u_n+2$. Montrer que $v_{n+1} = \frac{1}{2}v_n^2$.
+   % \item Montrer par récurrence que pour tout $n \geq 0$ on a $v_n = 2\left(\frac{a}{2}+1\right)^{2^{n}}$.
+   % \item \'Etudier la convergence de la suite $(u_n)_{n\geq 0}$ pour $a\in \R$. 
+    
+   % On pourra distinguer les cas $a<-2, a=-2, a\in \left]-2,0\right[, a=0$ et $a>0$.}
+\end{enumerate}
+
+\exo On considère la fonction $F \colon \left]-\infty, \frac{1}{2}\right[ \to \R$ définie par $F(x)=2x\mathrm{e}^x+\ln(1-2x)$.
+\begin{enumerate}
+    \item Déterminer le DL à l'ordre 3 en 0 de $F$.
+    \item On considère la suite $(v_n)_{n \geq 3}$ définie par $v_n=\frac{2}{n}\mathrm{e}^{\frac{1}{n}}+\ln(1-\frac{2}{n})$. \`A l'aide de la question précédente, déterminer un équivalent simple de $v_n$.
+    \item Montrer que la suite $(n^3v_n)_{n \geq 3}$ est convergente, et déterminer sa limite.
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+
+\begin{center}
+	\huge Correction de l'examen terminal
+	
+	\large Mathématiques S2 - 10 mai 2022
+	
+	\large V. Souveton
+\end{center}
+
+
+
+\section*{Questions de cours}
+
+\begin{enumerate}
+	\item $\forall \varepsilon \in \mathbf{R}_+^* \quad \exists N \in \mathbf{N} \quad \forall n \in \mathbf{N} \quad (n \geq N \implies |w_n+3| \leq \varepsilon)$
+	
+	\item $\text{Ker}(\varphi) = \{x \in E \ ; \ \varphi(x)=0\}$. On utilise la caractérisation usuelle pour montrer que $\text{Ker}(\varphi)$ est un sev de $E$, ce qui montrera que c'est un espace vectoriel : $\varphi(0_E) = 0_F$ (car $\varphi$ est linéaire) et pour tous $x,y \in \text{Ker}(\varphi)$, pour tout $\lambda \in \mathbf{R}$, on a $\varphi(x+\lambda y) = \varphi(x) + \lambda \varphi(y) = 0_F$. 
+	
+	\item $\text{dim} \ \mathbf{R}_4[X] = 5$. Théorème du rang appliqué à $h$ : $\text{dim} \ \mathbf{R}_4[X] = \text{dim} \ \text{Ker}(h) + \text{dim} \ \text{Im}(h)$. Ici, on a $\text{dim} \ \text{Im}(h) \leq 4$ (car l'image de $h$ est un sev de $\mathbf{R}^4$) donc $\text{dim} \ \text{Ker}(h) \geq 5-4 = 1$ donc $\text{Ker}(h) \neq \{0\}$ et $h$ n'est pas injective.
+\end{enumerate}
+	
+	
+\section*{Exercice 1}
+
+\begin{enumerate}
+	\item La famille est libre et contient $3 = \text{dim} \ \mathbf{R}^3$ vecteurs donc c'est une base de $\mathbf{R}^3$.
+	
+	\item $(x,y,z) \in \text{Ker}(f+id) \Longleftrightarrow (A+I_3) \begin{pmatrix}
+	x \\
+	y \\
+	z
+	\end{pmatrix} = 0 \Longleftrightarrow \left\{
+	\begin{array}{l}
+	y = 0 \\
+	x = 2z
+	\end{array}
+	\right.$ \\
+	On en déduit alors que $\text{Ker}(f+id) = \{ \begin{pmatrix}
+	2z \\
+	0 \\
+	z
+	\end{pmatrix} \ ; \ z \in \mathbf{R}
+	\}$. Ainsi, $\text{Ker}(f+id)$ est de dimension 1 et une base est donnée par la famille contenant le seul vecteur $(2,0,1)$. Ainsi, le vecteur $u_1$ est dans $\text{Ker}(f+id)$  donc $(f+id)(u_1) = f(u_1) + u_1 = 0 \Longleftrightarrow f(u_1) = -u_1$.
+	
+	\item $f(u_2) = u_3$ et $f(u_3) = -u_2$.
+	
+	\item $B = \begin{pmatrix}
+	-1 & 0 & 0 \\
+	0 & 0 & -1 \\
+	0 & 1 & 0
+	\end{pmatrix}$
+	
+	\item En développant par rapport à la première colonne, on trouve $\text{det} \ B = -1 \neq 0$. On en déduit que la famille $(f(u_1), f(u_2), f(u_3))$, qui est génératrice de $\text{Im}(f)$, est également libre. Ainsi, c'est une base de $\text{Im}(f)$ qui est donc un sev de $\mathbf{R}^3$ de dimension 3, donc $\text{Im}(f) = \mathbf{R}^3$ et $f$ est surjective. Le théorème du rang donne ensuite $\text{dim}(\text{Ker}(f)) = 0$ d'où $\text{Ker}(f) = \{0\}$ et $f$ est injective. En conclusion, $f$ est bien bijective.
+	
+	\item La matrice de $h$ dans la base $(u_1, u_2, u_3)$ est celle de $f \circ f \circ f \circ f$, i.e. $B^4$. On montre par le calcul que $B^4 = I_3$, qui est la matrice de $id$ dans la base $(u_1, u_2, u_3)$. D'où $h = id$.
+	
+	\item $A^4$ est la matrice de $f \circ f \circ f \circ f$, qui est l'identité d'après la question précédente, dans la base canonique. D'où $A^4 = I_3$. 
+\end{enumerate}
+
+
+
+\section*{Exercice 2}
+
+\begin{enumerate}
+	\item La courbe représentative de $p$ est une parabole convexe s'annulant en $-4$ et 0. $p$ est donc une application décroissante sur $]-\infty,-2]$ et croissante sur $]-2,+\infty[$, donc croissante sur $]-2,0[$. $p(-2) = -2$ et $p(0) = 0$ donc $p(]-2,0[) = ]-2,0[$.
+	
+	\item \textbf{Initialisation :} $u_0 = a \in ]-2,0[$, d'après l'énoncé. \\
+	
+	\textbf{Hérédité :} On suppose que $u_n \in ]-2,0[$. Alors, $u_{n+1} = p(u_n) \in ]-2,0[$, puisque l'intervalle $]-2,0[$ est stable par $p$. \\
+	
+	\textbf{Conclusion :} $\forall n \in \mathbf{N}, \quad u_n \in ]-2,0[$.
+	
+	\item La courbe représentative de $q$ est une parabole convexe s'annulant en $-2$ et 0. $p$ est donc une application négative sur $]-2,0[$. Ainsi, pour tout $n \in \mathbf{N}$, on a $u_{n+1}- u_n = p(u_n) - u_n = q(u_n) \leq 0$, puisque tous les termes de la suite sont compris entre $-2$ et 0. Donc $(u_n)$ est décroissante.
+	
+	\item La suite est décroissante et minorée donc converge. Puisque $p$ est continue, la limite est solution de l'équation $\ell = p(\ell) \Longleftrightarrow \ell = 0 \text{ ou } \ell = -2$. Puisque $u_0 < 0$ et que la suite est décroissante, alors $\ell = -2$.
+	
+\end{enumerate}
+
+
+
+\section*{Exercice 3}
+
+\begin{enumerate}
+	\item Au voisinage de 0,
+	\begin{align*}
+		F(x) &= 2x + 2x^2 + \frac{2x^3}{2} - 2x - \frac{4x^2}{2} - \frac{8x^3}{3} + o(x^3) \\
+		&= \frac{-5}{3}x^3 + o(x^3).
+	\end{align*}
+	
+	\item Quand $n \to \infty$, alors $1/n \to 0$. Ici, $v_n = F(1/n) \sim \frac{-5}{3} \times \frac{1}{n^3}$ en $+\infty$.
+	
+	\item D'après la question précédente, on a $n^3 v_n \sim n^3 \times \left( \frac{-5}{3} \times \frac{1}{n^3}\right) = \frac{-5}{3} \to \frac{-5}{3}$ quand $n \to \infty$. La limite cherchée est donc $-5/3$.
+\end{enumerate}
+
+
+\end{document}

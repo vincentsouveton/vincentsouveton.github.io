@@ -11,7 +11,7 @@ As a scientist, I am deeply interested in the mathematical description and numer
 
 ### Vlasov Equation (Cosmological Context)
 
-In cosmology, rather than tracking each particle individually as in $$N$$-body simulations,we describe the system through a **distribution function** $$f(x, v, t)$$, representing the density of particles in phase space:
+In cosmology, rather than tracking each particle individually as in $N$-body simulations,we describe the system through a **distribution function** $f(x, v, t)$, representing the density of particles in phase space:
 
 <p>
 $$
