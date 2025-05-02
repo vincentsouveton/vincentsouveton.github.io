@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PIC Method for Vlasov-Poisson Equations
+title: Simulating the Universe 
 date: 2025-05-02
 description: Simulating the Universe
 tags:
