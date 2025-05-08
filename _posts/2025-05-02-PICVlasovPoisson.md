@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simulating the Universe 
+title: Simulating the Universe
 date: 2025-05-02
 description: Simulating the Universe
 tags:
@@ -11,7 +11,7 @@ As a scientist, I am deeply interested in the mathematical description and numer
 
 ### Vlasov Equation (Cosmological Context)
 
-In cosmology, rather than tracking each particle individually as in $N$-body simulations,we describe the system through a **distribution function** $f(x, v, t)$, representing the density of particles in phase space:
+In cosmology,we describe the system through a **distribution function** $f(x, v, t)$, representing the density of particles in phase space, in the limit of a large number of particles:
 
 <p>
 $$
@@ -23,11 +23,11 @@ $$
 - $v$: velocity  
 - $\Phi(x, t)$: gravitational potential  
 
-This is a Hamiltonian transport equation in phase space. It states that $$f$$ is conserved along particle trajectories. In cosmology, this equation governs the evolution of dark matter in the cold dark matter (CDM) approximation.
+This is a Hamiltonian transport equation characterizing volume-preservation in phase space. In cosmology, this equation governs the evolution of dark matter in the cold dark matter (CDM) approximation.
 
 ### Poisson Equation (Gravitational)
 
-The gravitational potential $$\Phi(x, t)$$ from which the gravitational field derives satisfies Poisson's equation, sourced by the mass density:
+The gravitational potential $\Phi(x, t)$ from which the gravitational field derives satisfies Poisson's equation, sourced by the mass density:
 
 <p>
 $$
