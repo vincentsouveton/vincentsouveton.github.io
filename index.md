@@ -1,15 +1,15 @@
 ---
 layout: page
-title: "Welcome"
+title: "Vincent Souveton"
 permalink: /
 ---
 
 <img src="assets/vs0.jpg" alt="My photo" width="200"/>
 
-Hello everyone, welcome to my personal academic website! I hold a Ph.D. in Applied Mathematics. My research interests lie at the boundary of statistics and computer science applied to a wide range of Physics problems.
+Hello and welcome to my personal academic website!
 
-I am currently a postdoctoral researcher at CEA. I am interested in the development of Machine Learning models for simulating physical systems and providing uncertainty quantification.
+I hold a Ph.D. in Applied Mathematics and my research lies at the intersection of statistics and computer science, with applications across a broad range of physics problems. I am currently a postdoctoral researcher at CNRS, where I focus on developing machine learning models for simulating physical systems and performing uncertainty quantification.
 
-Before that, I was a PhD student at [Laboratoire de Mathématiques Blaise Pascal](https://lmbp.uca.fr/), Université Clermont Auvergne. My thesis deals with the study and development of sampling algorithms (generative models in Machine Learning and non-reversible Monte Carlo methods) with applications in Cosmology. Also, I am a former member of the [Aquila](https://www.aquila-consortium.org/) consortium.
+Previously, I completed my Ph.D. at [Laboratoire de Mathématiques Blaise Pascal](https://lmbp.uca.fr/), Université Clermont Auvergne, where where I explored sampling algorithms, specifically generative models and non-reversible Markov Chain Monte Carlo techniques, with applications in cosmology. I was also a member of the [Aquila](https://www.aquila-consortium.org/) consortium.
 
 You can download a CV [here](assets/CV.pdf).
