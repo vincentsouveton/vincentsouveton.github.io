@@ -4,7 +4,7 @@ title: "Vincent Souveton"
 permalink: /
 ---
 
-<img src="assets/vs0.jpg" alt="My photo" width="200"/>
+<img src="assets/vs1.jpg" alt="My photo" width="200"/>
 
 Hello and welcome to my personal academic website!
 
