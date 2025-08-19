@@ -21,7 +21,7 @@ Mais pour que la gravité sache quoi faire, il faut lui donner un plan. Ce plan,
 
 <p>
 $$
-\\nabla^2 \\Phi = 4\\pi G (\\rho - \\bar{\\rho}).
+\nabla^2 \Phi = 4\pi G (\rho - \bar{\rho}).
 $$
 </p>
 
