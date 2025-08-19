@@ -1,113 +1,54 @@
 ---
 layout: post
-title: Simulating the Universe
+title: Simuler l'univers (rien que ça)
 date: 2025-05-02
 description: Simulating the Universe
 tags:
 categories:
 ---
 
-As a scientist, I am deeply interested in the mathematical description and numerical simulation of physical systems, many of which are governed by Partial Differential Equations (PDEs). During my PhD, I encountered the **Vlasov-Poisson equations**, which describe the evolution of a collisionless system of massive particles under their own gravitational field. These equations are fundamental in modeling the large-scale structure formation of the universe, where dark matter is treated as a continuous distribution evolving in phase space. Note that the same formalism is also used in plasma physics for electrically charged particles.
-
-### Vlasov Equation (Cosmological Context)
-
-In cosmology,we describe the system through a **distribution function** $f(x, v, t)$, representing the density of particles in phase space, in the limit of a large number of particles:
+L’univers est un endroit décidément trop grand pour être raisonnable. Il est rempli de matière invisible, d’étoiles lointaines, et de gens effroyablement ennuyeux qui pensent qu’on peut l’expliquer avec des équations. Tout commence avec une question simple : comment simuler l’évolution de la matière noire, cette chose mystérieuse qui compose 25 % de la masse de l’univers et ne prend même pas la peine de briller ? La réponse, bien entendu, implique une équation. En l’occurrence, **l’équation de Vlasov** :
 
 <p>
 $$
-\frac{\partial f}{\partial t} + v \frac{\partial f}{\partial x} - \nabla \Phi(x, t) \frac{\partial f}{\partial v} = 0
+\frac{\partial f}{\partial t} + v \cdot \nabla_x f - \nabla \Phi \cdot \nabla_v f = 0.
 $$
 </p>
 
-- $x$: spatial position  
-- $v$: velocity  
-- $\Phi(x, t)$: gravitational potential  
+Ne paniquez pas. Cette équation dit simplement que les particules vont là où la gravité leur dit d’aller, à condition qu’elles n’entrent pas en collision, ne changent pas d’avis, et ne soient pas distraites par un champ de force. On modélise donc la matière noire comme un fluide très poli, qui suit les règles sans discuter.
 
-This is a Hamiltonian transport equation characterizing volume-preservation in phase space. In cosmology, this equation governs the evolution of dark matter in the cold dark matter (CDM) approximation.
-
-### Poisson Equation (Gravitational)
-
-The gravitational potential $\Phi(x, t)$ from which the gravitational field derives satisfies Poisson's equation, sourced by the mass density:
+Mais pour que la gravité sache quoi faire, il faut lui donner un plan. Ce plan, c’est **l’équation de Poisson** :
 
 <p>
 $$
-\nabla^2 \Phi(x, t) = 4\pi G \left[ \rho(x, t) - \bar{\rho} \right]
+\\nabla^2 \\Phi = 4\\pi G (\\rho - \\bar{\\rho}).
 $$
 </p>
 
-where:
+Là encore, rien de bien méchant : si la densité de matière est un peu trop élevée quelque part, alors hop, la gravité tire tout le monde vers ce coin, comme une soirée où il reste encore des chips. Et ainsi l’univers s’organise.
 
-- $\rho(x, t) = m \int f(x, v, t) \, dv$  
-- $m$: mass of individual particles  
-- $\bar{\rho}$: average (background) density  
-- $G$: gravitational constant  
+Mais résoudre ces équations à la main est un peu long, alors on utilise des ordinateurs. On leur confie des centaines, des milliers, des millions, des milliards (selon notre envie mais surtout selon le budget de notre université) de particules fictives et on les regarde évoluer sur une grille numérique. C’est ce qu’on appelle la méthode **Particle-In-Cell**, ou PIC pour les gens pressés (et les amateurs de sigles mystérieux).
 
-Subtracting $\bar{\rho}$ ensures consistency with periodic boundary conditions in an expanding universe.
+Le principe est simple :
 
-### Particle-In-Cell (PIC) Method for Cosmological Vlasov-Poisson
+1. On place des particules dans un cube (virtuel, mais très sérieux).  
 
-The **PIC method** provides an efficient way to numerically solve the Vlasov-Poisson system, particularly in the collisionless regime relevant for dark matter dynamics. The method scales efficiently to large numbers of particles and allows to captures nonlinear structure formation (e.g. filaments, halos). However, it introduces discreteness noise thus demanding careful choice of hyperparameters.
+2. On leur demande gentiment de déposer leur masse sur une grille.
 
-### PIC Steps (1D, Gravitational)
+3. On calcule le potentiel gravitationnel avec une **FFT** (Fast Fourier Transform, pour les intimes).  
 
-#### 1. Initialization
+4. On en déduit un champ de gravité, qu’on applique aux particules.  
 
-- Sample $N$ dark matter particles from an initial distribution $f(x, v, 0)$, typically derived from cosmological initial conditions.  
-- Define a spatial grid with $N_x$ points and spacing $dx$.
+5. On recommence.  
 
-#### 2. Mass Assignment
+6. On boit du café en attendant que ça tourne.
 
-Deposit particle masses $m_p$ to the grid using **Cloud-In-Cell (CIC)** interpolation:
+Petit à petit, des structures apparaissent. Des filaments, des vides, des amas. Ça ressemble à l’univers réel, sauf que celui-ci tient dans quelques gigaoctets et ne nécessite pas de télescope spatial pour être exploré.
 
-<p>
-$$
-\rho_i = \sum_p m_p \cdot S(x_i - x_p)
-$$
-</p>
-
-Subtract background density $\bar{\rho}$ for cosmological consistency.
-
-#### 3. Solve Poisson Equation
-
-Use **Fast Fourier Transform** to solve:
-
-<p>
-$$
-\frac{d^2 \Phi}{dx^2} = 4\pi G \left( \rho(x) - \bar{\rho} \right)  
-\quad \Rightarrow \quad  
-\hat{\Phi}(k) = -\frac{4\pi G}{k^2} \hat{\rho}(k)
-$$
-</p>
-
-Compute gravitational field:
-
-<p>
-$$
-\hat{a}(k) = -ik \hat{\Phi}(k)
-$$
-</p>
-
-Inverse FFT yields $a(x) = -\nabla \Phi(x)$, the gravitational acceleration.
-
-#### 4. Interpolate Force to Particles
-
-Interpolate the gravitational acceleration $a(x)$ to particle positions using CIC.
-
-#### 5. Advance Particles (Leapfrog Scheme)
-
-- **Kick**: $v^{n+1/2} = v^n + a \cdot \frac{\Delta t}{2}$  
-- **Drift**: $x^{n+1} = x^n + v^{n+1/2} \cdot \Delta t$
-- **Kick**: $v^{n+1} = v^{n+1/2} + a \cdot \frac{\Delta t}{2}$
-
-Apply **periodic boundary conditions**.
-
-#### 6. Loop
-
-Repeat steps 2 to 5 for each time step to evolve the system.
-
+Bien sûr, la méthode a ses défauts. Elle est bruitée, sensible aux paramètres, et parfois les particules font n’importe quoi si on les néglige trop longtemps. Mais dans l’ensemble, c’est un outil assez élégant pour modéliser quelque chose d’aussi fondamentalement chaotique que l’univers. Et puis il faut bien l’avouer : faire apparaître des galaxies à partir d’une poignée d’équations et d’un fichier Python, ça a quelque chose de profondément satisfaisant.
 
 ---
 
-## References
+## Références
 - Birdsall & Langdon, *Plasma Physics via Computer Simulation*
 - Hockney & Eastwood, *Computer Simulation Using Particles*
