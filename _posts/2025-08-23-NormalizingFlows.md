@@ -15,12 +15,11 @@ Un **modèle génératif**, c’est une machine à produire des choses qu’on n
 
 Parlons plutôt des majestueux **hiboux**, maîtres du ciel nocturne. Imaginons donc un ensemble d’images de hiboux. Chaque image est un **échantillon** tiré selon une mystérieuse **distribution de probabilité** censée représenter tous les hiboux du monde. Et c'est sur cet ensemble d'échantillons que nous allons entraîner notre modèle génératif.
 
-Notre objectif ? Apprendre à générer *de nouvelles images de hiboux*. Pas des copies, des créations inédites. Comme un oracle, mais avec des cartes graphiques assez puissantes (les fameuses GPUs, si chères aux ami-es gamers, si chères tout court d'ailleurs. Au vu des commandes grandissantes, il conviendrait de se demander s'il n'y a pas un vaste système de contournement de l'utilisation des GPUs dans les labos d'IA pour jouer à Call of Duty sous prétexte de recherche scientifique).
+Notre objectif ? Apprendre à *générer de nouvelles images de hiboux*. Pas des copies, des créations inédites. Comme un oracle, mais avec des cartes graphiques assez puissantes (les fameuses GPUs, si chères aux ami-es gamers, si chères tout court d'ailleurs. Au vu des commandes grandissantes, il conviendrait de se demander s'il n'y a pas un vaste système de contournement de l'utilisation des GPUs dans les labos d'IA pour jouer à Call of Duty sous prétexte de recherche scientifique).
 
 ## Les flots normalisants : du bruit vers les hiboux
 
-Le principe des **flots normalisants** (ou *normalizing flows*, pour les bilingues contrariés) est le suivant :  
-On part d’une distribution de probabilité simple (par exemple une bonne vieille Gaussienne) $p_Z$ et on la transforme progressivement pour qu’elle ressemble à notre **distribution des hiboux** $p$. Ce qui donne, dans un moment de poésie mathématique :
+Le principe des **flots normalisants** (ou *normalizing flows*, pour les bilingues contrariés) est le suivant : on part d’une distribution de probabilité simple (par exemple une bonne vieille Gaussienne) $p_Z$ et on la transforme progressivement pour qu’elle ressemble à notre **distribution des hiboux** $p$. Ce qui donne, dans un moment de poésie mathématique :
 
 <p>
 $$
@@ -29,9 +28,9 @@ $$
 </p>
 
 - $x$ est une image de hibou ;
-- $p_X$ est la distribution de probabilité de notre modèle (idéalement, s'il est bien entraîné, elle doit être presque égale à la distribution cible $p$
-- $f$ est la fonction qui transforme notre image en bruit (et inversement).  
-- Le déterminant du jacobien de $f$ est là pour faire peur aux littéraires (en vrai, c'est lui qui mesure à quel point la transformation déforme l’espace).
+- $p_X$ est la distribution de probabilité de notre modèle (idéalement, s'il est bien entraîné, elle doit être presque égale à la distribution cible $p$) ;
+- $f$ est la fonction qui transforme notre image en bruit (et inversement) ;
+- le déterminant du jacobien de $f$ est là pour faire peur aux littéraires (en vrai, c'est lui qui mesure à quel point la transformation déforme l’espace).
 
 L'entraînement, c’est simple : on prend une belle image de hibou et on lui applique une suite de transformations soigneusement choisies pour la transformer en notre Gaussienne, aussi appelée **bruit pur** car dans le cas d'une image, une Gaussienne ressemble à ce qu’on voit sur une télé des années 90 quand l’antenne est mal orientée. L’idée est que si on sait comment détruire (métaphoriquement, hein !) un hibou avec assez d’élégance, on saura faire le chemin inverse.
 
