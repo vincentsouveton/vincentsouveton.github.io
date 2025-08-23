@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ma vie est un long flot tranquille
-date: 2025-01-01
+date: 2025-08-23
 description: comment générer des hiboux à partir d'une Gaussienne
 tags:
 categories:
