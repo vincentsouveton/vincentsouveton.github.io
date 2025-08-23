@@ -24,7 +24,7 @@ On part d’une distribution de probabilité simple (par exemple une bonne vieil
 
 <p>
 $$
-\log p_X(x) = \log p_Z(f(x)) + \log \left| \det \left( \\rac{\partial f}{\partial x} \right) \right|
+\log p_X(x) = \log p_Z(f(x)) + \log \left| \det \left( \frac{\partial f}{\partial x} \right) \right|
 $$
 </p>
 
