@@ -7,7 +7,7 @@ tags:
 categories:
 ---
 
-Si une matinale radio avait la décence de m’inviter un jour, je parlerais probablement de **modèles de flots normalisants**. Il ne serait point question de crise énergétique ou d’extinction de l’humanité par l’IA. Juste de hiboux, de formule de changement de variable et de GPUs. Ce serait un grand moment de radio.
+Si une matinale radio avait la décence de m’inviter un jour pour parler de mon travail, j'évoquerais probablement les **modèles de flots normalisants**. Il ne serait point question de crise énergétique ou d’extinction de l’humanité par l’IA. Juste de hiboux, de formule de changement de variable et de GPUs. Ce serait un grand moment de radio.
 
 ## Les modèles génératifs appliqués aux oiseaux nocturnes
 
@@ -34,15 +34,15 @@ $$
 
 L'entraînement, c’est simple : on prend une belle image de hibou et on lui applique une suite de transformations soigneusement choisies pour la transformer en notre Gaussienne, aussi appelée **bruit pur** car dans le cas d'une image, une Gaussienne ressemble à ce qu’on voit sur une télé des années 90 quand l’antenne est mal orientée. L’idée est que si on sait comment détruire (métaphoriquement, hein !) un hibou avec assez d’élégance, on saura faire le chemin inverse.
 
-Et effectivement : une fois entraîné, on peut prendre du bruit pur, lui appliquer la transformation **inverse**, et obtenir une toute nouvelle image de hibou.
+Et effectivement : une fois entraîné, on peut prendre du bruit pur tiré au hasard, lui appliquer la transformation **inverse**, et obtenir une toute nouvelle image de hibou.
 
 ## La vraie beauté, c’est l’inversibilité (et les jacobiens pas trop compliqués)
 
 Pour que tout cela fonctionne, les transformations qu’on utilise doivent satisfaire quelques critères techniques mais vitaux :
 
-- Être **bijectives** (on peut revenir en arrière sans tout casser)  
-- Être **différentiables** (sinon, l’optimiseur pleure)  
-- Avoir un **jacobien** facile à calculer (parce qu’on a autre chose à faire de nos vies)
+- être **bijectives** (on peut revenir en arrière sans tout casser) ;
+- être **différentiables** (sinon, l’optimiseur pleure) ;
+- avoir un **jacobien** facile à calculer (parce qu’on a autre chose à faire de nos vies).
 
 Heureusement, des gens extrêmement intelligents ont inventé plein de constructions techniques pour faire ça : RealNVP, Glow, MAF, et autres acronymes qui sonnent comme des noms de virus inquiétants.
 
