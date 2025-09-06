@@ -1,0 +1,25 @@
+---
+layout: post
+title: Un manifeste anti-utilitariste
+date: 2025-09-06
+description: ou comment perdre son temps de façon hautement productive
+tags:
+categories:
+---
+
+Un de mes amis est algébriste. Sa vie, aussi passionnante qu’une déclaration d’impôts, consiste à étudier les propriétés de structures abstraites qui elles-mêmes ignorent toujours leur existence. Bon, je n’ai jamais dit que c’était mon meilleur ami non plus. De mon côté, ma vie, formidable en tout point, consiste à développer des modèles d’apprentissage automatique pour les appliquer ensuite à la résolution de problèmes issus de la physique ou de l’ingénierie. Pour le dire autrement, cet ami (même si je préfère le qualifier en public de « vague connaissance ») fait des mathématiques fondamentales quand je fais des mathématiques appliquées.
+
+Dans la grande cité des mathématiciens, ces deux camps se chamaillent parfois. Les premiers accusent les seconds de n’être que de vulgaires techniciens, et les seconds ricanent sur l’inutilité immédiate de leurs collègues qui passent vingt ans à réfléchir à un objet sans nom, sans couleur et sans application. Heureusement, quelques sages viennent rappeler qu’il y a largement assez de place pour que chacun perde son temps comme il veut. Si l’on dézoome pour observer les communautés scientifiques dans leur ensemble, les mathématiques ont un super-pouvoir fascinant : celui de repousser à peu près tout le monde. Les critiques viennent en deux salves. D’abord, les mathématiques seraient trop difficiles (souvent dit par des gens qui ont pourtant survécu à un cursus scientifique complet, mais qui trouvent subitement que la notion de « dérivée » est une arme de destruction massive). Ensuite, les mathématiques ne serviraient à rien (pour l’avoir vécu, je peux affirmer que cette critique s’applique curieusement aussi aux mathématiciens appliquées).   
+
+Le premier axe reflète selon moi l’aspect élitiste des mathématiques, qui ont été largement érigées en critère de sélection pour accéder aux études et donc aux postes les plus prestigieux. Quand une discipline est moins un mystérieux domaine d’étude qu’un rite de passage vers des diplômes prestigieux, elle devient curieusement moins attirante. Mais c’est le second point qui m’intéresse le plus. La vérité, c’est que l’obsession utilitariste est partout. On ne peut plus écrire un théorème sans qu’un ingénieur lève la main pour demander : « Oui, mais est-ce que ça fera tourner ma machine à laver connectée plus vite ? ». Ce qui est fascinant, c’est cette idée selon laquelle tout problème humain est un problème technique. Comme si la famine mondiale se résolvait par une meilleure application de livraison à domicile, ou comme si la crise climatique disparaissait en branchant deux éoliennes supplémentaires sur une rallonge. Dans nos sociétés occidentales en crise (climatique, économique, n’importe quoi en -ique), le techno-solutionnisme devient une religion moderne et les ingénieurs en sont les prêtres.
+
+On objectera que la recherche fondamentale sert à long terme, qu’elle crée aujourd’hui les outils de demain. Certes, les exemples ne manquent pas. Mais ce raisonnement reste prisonnier du même carcan utilitariste. Ma réponse est plus simple : l’inutilité est précieuse. Comme certaines œuvres artistiques abstraites, comme les blagues nulles, comme les petits détours dans une ville étrangère qui se terminent dans une impasse mais dont on se souvient quand même avec tendresse. En tant qu’ouvreurs d’horizons, les mathématiciens en particulier et les scientifiques en général devraient être encouragés à s’engager en partie sur des voies inédites sans savoir où se trouve la destination. Je crois que nos esprits créatifs ont besoin d’être irrigués par des idées nouvelles, étranges et esthétiques pour contrer l’assèchement contemporain qui vient, en partie, de notre manque de « perspectives terrestres » et intellectuelles désirables.
+
+Il faut maintenant confier aux millions de lecteurs de ce blog un secret. Si je ressens une véritable fierté académique à voir mon travail appliqué à d’autres disciplines scientifiques, j’éprouve une joie tout aussi intense à bricoler les aspects méthodologiques pour eux-mêmes, comme on collectionnerait des trombones, non pas parce qu’ils fixent des liasses de papier, mais parce qu’ils brillent joliment sous la lumière. De ce point de vue, les applications ne sont pas tant une fin qu’un prétexte, une excuse respectable pour obtenir de jolies données sur lesquels tester mes modèles. Ce qui me fait vibrer, ce sont les merveilleuses machines intellectuelles que je lâche sur de puissantes cartes graphiques pour leur donner vie.
+
+---
+
+## Références
+
+- Alessandro Pignocchi, *Perspectives Terrestres*, Seuil, 2025
+- Godfrey H. Hardy – *A Mathematician’s Apology*, Cambridge University Press, 1940

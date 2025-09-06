@@ -9,15 +9,9 @@ categories:
 
 Si une matinale radio avait la décence de m’inviter un jour pour parler de mon travail, j'évoquerais probablement les **modèles de flots normalisants**. Il ne serait point question de crise énergétique ou d’extinction de l’humanité par l’IA. Juste de hiboux, de formule de changement de variable et de GPUs. Ce serait un grand moment de radio.
 
-## Les modèles génératifs appliqués aux oiseaux nocturnes
+Un **modèle génératif**, c’est une machine à produire des choses qu’on n’a pas encore vues mais qui *ressemblent* beaucoup à ce qu’on a déjà. On en voit partout : des visages générés, des voix clonées, des poèmes médiocres, et bien sûr… des chats. Mais parlons franchement : les chats ont pris trop de place dans l’écosystème des données. Ils sont surfaits, égocentriques, et parfaitement prévisibles. Parlons plutôt des majestueux **hiboux**, maîtres du ciel nocturne. Imaginons donc un ensemble d’images de hiboux. Chaque image est un **échantillon** tiré selon une mystérieuse **distribution de probabilité** censée représenter tous les hiboux du monde. Et c'est sur cet ensemble d'échantillons que nous allons entraîner notre modèle génératif.
 
-Un **modèle génératif**, c’est une machine à produire des choses qu’on n’a pas encore vues mais qui *ressemblent* beaucoup à ce qu’on a déjà. On en voit partout : des visages générés, des voix clonées, des poèmes médiocres, et bien sûr… des chats. Mais parlons franchement : les chats ont pris trop de place dans l’écosystème des données. Ils sont surfaits, égocentriques, et parfaitement prévisibles.
-
-Parlons plutôt des majestueux **hiboux**, maîtres du ciel nocturne. Imaginons donc un ensemble d’images de hiboux. Chaque image est un **échantillon** tiré selon une mystérieuse **distribution de probabilité** censée représenter tous les hiboux du monde. Et c'est sur cet ensemble d'échantillons que nous allons entraîner notre modèle génératif.
-
-Notre objectif ? Apprendre à *générer de nouvelles images de hiboux*. Pas des copies, des créations inédites. Comme un oracle, mais avec des cartes graphiques assez puissantes (les fameuses GPUs, si chères aux ami-es gamers, si chères tout court d'ailleurs. Au vu des commandes grandissantes, il conviendrait de se demander s'il n'y a pas un vaste système de contournement de l'utilisation des GPUs dans les labos d'IA pour jouer à Call of Duty sous prétexte de recherche scientifique).
-
-## Les flots normalisants : du bruit vers les hiboux
+Notre objectif ? Apprendre à *générer de nouvelles images de hiboux*. Pas des copies, des créations inédites. Comme un oracle, mais avec des cartes graphiques assez puissantes (les fameuses GPUs, si chères aux gamers, si chères tout court d'ailleurs. Au vu des commandes grandissantes, il conviendrait de se demander s'il n'y a pas un vaste système de contournement de l'utilisation des GPUs dans les labos d'IA pour jouer à Call of Duty sous prétexte de recherche scientifique).
 
 Le principe des **flots normalisants** (ou *normalizing flows*, pour les bilingues contrariés) est le suivant : on part d’une distribution de probabilité simple (par exemple une bonne vieille Gaussienne) $p_Z$ et on la transforme progressivement pour qu’elle ressemble à notre **distribution des hiboux** $p$. Ce qui donne, dans un moment de poésie mathématique :
 
@@ -32,11 +26,7 @@ $$
 - $f$ est la fonction qui transforme notre image en bruit (et inversement) ;
 - le déterminant du jacobien de $f$ est là pour faire peur aux littéraires (en vrai, c'est lui qui mesure à quel point la transformation déforme l’espace).
 
-L'entraînement, c’est simple : on prend une belle image de hibou et on lui applique une suite de transformations soigneusement choisies pour la transformer en notre Gaussienne, aussi appelée **bruit pur** car dans le cas d'une image, une Gaussienne ressemble à ce qu’on voit sur une télé des années 90 quand l’antenne est mal orientée. L’idée est que si on sait comment détruire (métaphoriquement, hein !) un hibou avec assez d’élégance, on saura faire le chemin inverse.
-
-Et effectivement : une fois entraîné, on peut prendre du bruit pur tiré au hasard, lui appliquer la transformation **inverse**, et obtenir une toute nouvelle image de hibou.
-
-## La vraie beauté, c’est l’inversibilité (et les jacobiens pas trop compliqués)
+L'entraînement, c’est simple : on prend une belle image de hibou et on lui applique une suite de transformations soigneusement choisies pour la transformer en notre Gaussienne, aussi appelée **bruit pur** car dans le cas d'une image, une Gaussienne ressemble à ce qu’on voit sur une télé des années 90 quand l’antenne est mal orientée. L’idée est que si on sait comment détruire (métaphoriquement, hein !) un hibou avec assez d’élégance, on saura faire le chemin inverse. Et effectivement : une fois entraîné, on peut prendre du bruit pur tiré au hasard, lui appliquer la transformation **inverse**, et obtenir une toute nouvelle image de hibou.
 
 Pour que tout cela fonctionne, les transformations qu’on utilise doivent satisfaire quelques critères techniques mais vitaux :
 
@@ -44,12 +34,7 @@ Pour que tout cela fonctionne, les transformations qu’on utilise doivent satis
 - être **différentiables** (sinon, l’optimiseur pleure) ;
 - avoir un **jacobien** facile à calculer (parce qu’on a autre chose à faire de nos vies).
 
-Heureusement, des gens extrêmement intelligents ont inventé plein de constructions techniques pour faire ça : RealNVP, Glow, MAF, et autres acronymes qui sonnent comme des noms de virus inquiétants.
-
-Personnellement, je m’intéresse à des **transformations hamiltoniennes** qui viennent de la mécanique classique. Elles préservent le volume en espace de phase, ce qui veut dire que le déterminant jacobien est égal à 1, donc on ne peut plus facile à calculer, et qu'elles offrent une belle interprétabilité physique. Autrement dit, au lieu de triturer nos données au hasard, on les fait évoluer selon des lois inspirées des systèmes dynamiques classiques, les mêmes lois qui font tomber la pomme sur la tête de Newton. Et si ça semble inutile, c’est probablement qu’on est sur la bonne voie.
-
-
-## En conclusion
+Heureusement, des gens extrêmement intelligents ont inventé plein de constructions techniques pour faire ça : RealNVP, Glow, MAF, et autres acronymes qui sonnent comme des noms de virus inquiétants. Personnellement, je m’intéresse à des **transformations hamiltoniennes** qui viennent de la mécanique classique. Elles préservent le volume en espace de phase, ce qui veut dire que le déterminant jacobien est égal à 1, donc on ne peut plus facile à calculer, et qu'elles offrent une belle interprétabilité physique. Autrement dit, au lieu de triturer nos données au hasard, on les fait évoluer selon des lois inspirées des systèmes dynamiques classiques, les mêmes lois qui font tomber la pomme sur la tête de Newton. Et si ça semble inutile, c’est probablement qu’on est sur la bonne voie.
 
 Les flots normalisants, c’est donc fait pour générer des hiboux à partir d'une télé mal réglée. Et si une radio me tendait un micro un matin à 7h45, entre deux pubs pour du café soluble et un jingle sur l’emploi des seniors, je crois que je dirais que c'est chouette.
 
