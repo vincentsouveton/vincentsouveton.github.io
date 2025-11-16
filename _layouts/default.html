@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- MathJax -->
   <script>
@@ -16,22 +20,56 @@
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <!-- Basic Styling -->
   <style>
-    nav {
-      padding: 10px;
-      background: #eee;
-      border-bottom: 1px solid #ccc;
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
+      line-height: 1.7;
+      color: #222;
+      background-color: #fff;
     }
+
+    nav {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 2rem;
+    }
+
     nav a {
-      margin-right: 15px;
+      margin-right: 20px;
       text-decoration: none;
-      color: #333;
+      color: #007acc;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    code {
+      background: #f2f2f2;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: monospace;
     }
   </style>
 </head>
+
 <body>
   {% include navbar.html %}
+
   <h1>{{ page.title }}</h1>
+
   <div>
     {{ content }}
   </div>
