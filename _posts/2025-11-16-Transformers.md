@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Piéger Shakespeare sur une GPU
-date: 2025-05-02
+date: 2025-11-16
 description: Transformer model
 tags:
 categories:
@@ -13,7 +13,7 @@ Depuis toujours, les humains rêvent de comprendre les grands génies littérair
 Un Transformer (dans sa version *decoder-only*, celle-là même utilisée par les LLMs modernes) est un modèle auto-régressif, ce qui signifie qu'il reçoit une séquence de mots (plus précisément appelés tokens), qu'il tente de prédire le prochain et qu'il recommence. Cette idée, incroyablement, suffit pour écrire des sonnets entiers. Chaque bloc du Transformer contient une succession de deux choses :
 
 1. **Self-attention** : le mécanisme qui permet au modèle de décider quels mots passés sont utiles pour prédire le prochain.
-  
+
 2. **Un réseau feed-forward (FFN)** : un petit réseau qui transforme les sorties provenant du mécanisme d'attention en des vecteurs légèrement meilleurs.
 
 Empilez quelques blocs, et vous obtenez une fidèle représentation de Shakespeare gravée dans du silicium.
