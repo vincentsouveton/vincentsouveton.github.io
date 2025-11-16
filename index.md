@@ -12,4 +12,4 @@ I hold a Ph.D. in Applied Mathematics and my research lies at the intersection o
 
 Previously, I completed my Ph.D. at [Laboratoire de Mathématiques Blaise Pascal](https://lmbp.uca.fr/), Université Clermont Auvergne, where I explored sampling algorithms, specifically generative models and non-reversible Markov Chain Monte Carlo techniques, with applications in cosmology. I was also a member of the [Aquila](https://www.aquila-consortium.org/) consortium.
 
-You can download a CV [here](assets/CV.pdf).
+Here is my [GitHub account](https://github.com/vincentsouveton/). You can download a [CV](assets/CV.pdf). Please do not hesitate to reach out to me for further information.
