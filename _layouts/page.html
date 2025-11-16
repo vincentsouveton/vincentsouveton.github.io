@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- MathJax Configuration -->
+  <!-- MathJax -->
   <script>
     window.MathJax = {
       tex: {
@@ -14,30 +15,83 @@
       svg: { fontCache: 'global' }
     };
   </script>
-  <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <style>
-    nav {
-      padding: 10px;
-      background: #eee;
-      border-bottom: 1px solid #ccc;
+    :root {
+      --bg: #fafafa;
+      --text: #111827;
+      --accent: #2563eb;
+      --muted: #6b7280;
+      --border: #e5e7eb;
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    nav {
+      background: #f3f4f6;
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.25rem;
+    }
+
     nav a {
-      margin-right: 15px;
+      margin-right: 1rem;
       text-decoration: none;
-      color: #333;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+
+    @media (min-width: 900px) {
+      .page-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 1.5rem 0 1rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 1rem;
     }
   </style>
 </head>
 <body>
   {% include navbar.html %}
-
-  <h1>{{ page.title }}</h1>
-
-  <div>
-    {{ content }}
+  <div class="page-wrapper">
+    <h1>{{ page.title }}</h1>
+    <main>
+      {{ content }}
+    </main>
   </div>
 </body>
 </html>
