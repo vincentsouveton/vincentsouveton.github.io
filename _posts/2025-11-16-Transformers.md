@@ -8,9 +8,9 @@ categories:
 ---
 
 
-Depuis toujours, les humains rêvent de comprendre les grands génies littéraires, un verre de vin et beaucoup de condescendence à la main. Mais au XXIᵉ siècle, au lieu de lire *Hamlet*, [quelqu'un]( https://github.com/karpathy/ng-video-lecture) a eu l’idée beaucoup plus efficace de dire : "Et si on compressait Shakespeare dans quelques millions de paramètres et qu’on le faisait tourner sur une carte graphique ?" Le pire, c’est que ça marche. Grâce aux Transformers, ces architectures à la base des grands modèles de langage (LLMs), nous savons aujourd’hui stocker l’essence stylistique d’un dramaturge du XVIᵉ siècle dans une matrice géante de nombres flottants. Le futur est décidément surprenant.
+Depuis toujours, les humains rêvent de comprendre les grands génies littéraires, un verre de vin et beaucoup de condescendance à la main. Mais au XXIᵉ siècle, au lieu de lire *Hamlet*, [quelqu'un]( https://github.com/karpathy/ng-video-lecture) a eu l’idée de se demander : "Et si on compressait Shakespeare dans quelques millions de paramètres et qu’on le faisait tourner sur une carte graphique ?" Le pire, c’est que ça marche. Grâce aux Transformers, ces architectures à la base des grands modèles de langage (LLMs), nous savons aujourd’hui stocker l’essence stylistique d’un dramaturge du XVIᵉ siècle dans une matrice géante de nombres flottants. Le futur est décidément surprenant.
 
-Un Transformer (dans sa version *decoder-only*, celle-là même utilisée par les LLMs modernes) est un modèle auto-régressif, ce qui signifie qu'il reçoit une séquence de mots (plus précisément appelés tokens), qu'il tente de prédire le prochain et qu'il recommence. Cette idée, incroyablement, suffit pour écrire des sonnets entiers. Chaque bloc du Transformer contient une succession de deux choses :
+Un Transformer (dans sa version *decoder-only*, celle-là même utilisée par les LLMs modernes) est un modèle auto-régressif, ce qui signifie qu'il reçoit une séquence de mots (plus précisément appelés tokens), qu'il tente de prédire le prochain et qu'il recommence. Cette idée, incroyablement simple, suffit pour écrire des sonnets entiers. Chaque bloc du Transformer contient une succession de deux choses :
 
 1. **Self-attention** : le mécanisme qui permet au modèle de décider quels mots passés sont utiles pour prédire le prochain.
 
@@ -29,15 +29,14 @@ Cela nous dit juste que si la requête d'un token est alignée avec la clé d'un
 
 Puisque c'était trop simple, les chercheurs ont décidé de faire plusieurs attentions en parallèle. C’est le concept de *multi-head attention* où chaque tête apprend à regarder l’histoire différemment et de manière automatique (l’une va peut-être se concentrer sur les verbes, l’autre sur les rimes, une autre encore sur des détails dramatiquement importants). On concatène les attentions provenant des différentes têtes, et c'est tout.
 
-Contrairement aux anciens réseaux récurrents, qui lisaient les textes comme quelqu’un qui ne peut tourner la page qu’après avoir fini la précédente, les Transformers sont **massivement parallélisables** puisque tous les tokens d’une séquence peuvent être traités en même temps et que toutes les têtes d’attention fonctionnent en parallèle. Ainsi, l'entraînement est beaucoup plus efficace. Pour apprendre, d'ailleur, le modèle lit tout Shakespeare, mot après mot, et doit prédire le suivant.  
-Chaque fois qu’il se trompe, on le punit gentiment grâce à une fonction de perte appelée **cross-entropy** :
+Contrairement aux anciens réseaux récurrents, qui lisaient les textes comme quelqu’un qui ne peut tourner la page qu’après avoir fini la précédente, les Transformers sont **massivement parallélisables** puisque tous les tokens d’une séquence peuvent être traités en même temps et que toutes les têtes d’attention fonctionnent en parallèle. Ainsi, l'entraînement est beaucoup plus efficace. Pour apprendre, d'ailleurs, le modèle lit tout Shakespeare, mot après mot, et doit prédire le suivant. Chaque fois qu’il se trompe, on le punit gentiment grâce à une fonction de perte appelée **cross-entropy** :
 
 <p>$$
 \mathcal{L}
 = - \sum_t \log p_\theta(x_t \mid x_{<t})
 $$</p>
 
-Cette quantité mesure à quel point le modèle raconte des bêtises. Et à force de corriger ses erreurs, il finit par réciter des sonnets plutôt convaincants. Une fois entraîné, on lui donne un début de phrase, et le modèle calcule la probabilité que chaque mot du dictionnaire soit le prochain mot de la phrase. Il pioche alors au hasard selon cette distribution de probabilité et recommence le processus, avec cette fois pour entrée le début de phrase et le nouveau mot qui vient d'y être ajouté. Le résultat est que nous avons réussi à compresser l'essence même de Shakespeare en quelques millions de paramètres, et que nous pouvons le forcer à parler sur une GPU. Merci la science.
+Cette quantité mesure à quel point le modèle raconte des bêtises. Et à force d'ajuster ses paramètres, il finit par réciter des sonnets plutôt convaincants. Une fois entraîné, on lui donne un début de phrase, et le modèle calcule la probabilité que chaque mot du dictionnaire soit le prochain mot de la phrase. Il pioche alors au hasard selon cette distribution de probabilité et recommence le processus, avec cette fois pour entrée le début de phrase et le nouveau mot qui vient d'y être ajouté. Le résultat est que nous avons réussi à compresser l'essence même de Shakespeare en quelques millions de paramètres, et que nous pouvons le forcer à parler sur une GPU. Merci la science.
 
 Fin du billet. Rideau. Applaudissements.
 
