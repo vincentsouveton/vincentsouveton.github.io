@@ -8,17 +8,15 @@ categories:
 ---
 
 
-Depuis toujours, les humains rêvent de comprendre les grands génies littéraires, un verre de vin et beaucoup de condescendance à la main. Mais au XXIᵉ siècle, au lieu de lire *Hamlet*, [quelqu'un]( https://github.com/karpathy/ng-video-lecture) a eu l’idée de se demander : "Et si on compressait Shakespeare dans quelques millions de paramètres et qu’on le faisait tourner sur une carte graphique ?" Le pire, c’est que ça marche. Grâce aux Transformers, ces architectures à la base des grands modèles de langage (les fameux LLMs comme Claude, Llama ou GPT), nous savons aujourd’hui stocker l’essence stylistique d’un dramaturge du XVIᵉ siècle dans une matrice géante de nombres flottants. Le futur est décidément surprenant.
+Depuis toujours, les humains rêvent de comprendre les grands génies littéraires, un verre de vin et beaucoup de condescendance à la main. Mais au XXIᵉ siècle, au lieu de lire *Hamlet*, [quelqu'un]( https://github.com/karpathy/ng-video-lecture) a eu l’idée de se demander : "Et si on compressait Shakespeare dans quelques millions de paramètres et qu’on le faisait tourner sur une carte graphique ?" Le pire, c’est que ça marche. Grâce aux Transformers, ces architectures à la base des grands modèles de langage (les fameux LLMs comme Claude, Llama ou GPT), nous savons aujourd’hui stocker le style d’un dramaturge du XVIᵉ siècle dans une matrice géante de nombres flottants. Le futur est décidément surprenant.
 
 Un Transformer (dans sa version *decoder-only*, celle-là même utilisée par les LLMs modernes) est un modèle auto-régressif, ce qui signifie qu'il reçoit une séquence de mots (plus précisément appelés tokens), qu'il prédit le prochain et qu'il recommence. Cette idée, incroyablement simple, suffit pour écrire des sonnets entiers. Chaque bloc du Transformer contient une succession de deux choses :
 
-1. **Self-attention** : le mécanisme qui permet au modèle de décider quels mots passés sont utiles pour prédire le prochain.
+1. Self-attention : le mécanisme neuronal qui permet au modèle de décider quels mots passés sont utiles pour prédire le prochain.
 
-2. **Un réseau feed-forward (FFN)** : un petit réseau qui transforme les sorties provenant du mécanisme d'attention en des vecteurs légèrement meilleurs.
+2. Un réseau entièrement connecté : un simple réseau de neurones qui transforme les sorties provenant du mécanisme d'attention en des vecteurs légèrement meilleurs.
 
-Empilez quelques blocs, et vous obtenez une fidèle représentation de Shakespeare gravée dans du silicium.
-
-L'attention est la clé de voûte de l'architecture, *tout ce dont on a besoin* pour paraphraser les concepteurs du modèle original. Sa version mathématique est un simple cocktail de multiplications de matrices. Rafraîchissant. Pour chaque token, on calcule, à l'aide de matrices apprises par le réseau, une *requête Q* (ce que le token cherche), une *clé K* (ce que le token a) et une *valeur V* (ce que le token communique s'il est interrogé). On applique ensuite une formule qui n'a rien de magique :
+Empilez quelques blocs, et vous obtenez une fidèle représentation de Shakespeare gravée dans du silicium. L'attention est la clé de voûte de l'architecture, *tout ce dont on a besoin* pour paraphraser les concepteurs du modèle original. Sa version mathématique est un simple cocktail de multiplications de matrices. Rafraîchissant. Pour chaque token, on calcule, à l'aide de matrices apprises par le réseau, une *requête Q* (ce que le token cherche), une *clé K* (ce que le token a) et une *valeur V* (ce que le token communique s'il est interrogé). On applique ensuite une formule qui n'a rien de magique :
 
 <p>$$
 \text{Attention}(Q, K, V)
@@ -29,7 +27,7 @@ Cela nous dit juste que si la requête d'un token est alignée avec la clé d'un
 
 Puisque c'était trop simple, les chercheurs ont décidé de faire plusieurs attentions en parallèle. C’est le concept de *multi-head attention* où chaque tête apprend à regarder l’histoire différemment et de manière automatique (l’une va peut-être se concentrer sur les verbes, l’autre sur les rimes, une autre encore sur des détails dramatiquement importants). On concatène les attentions provenant des différentes têtes, et c'est tout.
 
-Contrairement aux anciens réseaux récurrents, qui lisaient les textes comme quelqu’un qui ne peut tourner la page qu’après avoir fini la précédente, les Transformers sont **massivement parallélisables** puisque tous les tokens d’une séquence peuvent être traités en même temps et que toutes les têtes d’attention fonctionnent en parallèle. Ainsi, l'entraînement est beaucoup plus efficace. Pour apprendre, d'ailleurs, le modèle lit tout Shakespeare, mot après mot, et doit prédire le suivant. Chaque fois qu’il se trompe, on le punit gentiment grâce à une fonction de perte appelée **cross-entropy** :
+Contrairement aux anciens réseaux récurrents, qui lisaient les textes comme quelqu’un qui ne peut tourner la page qu’après avoir fini la précédente, les Transformers sont massivement parallélisables puisque tous les tokens d’une séquence peuvent être traités en même temps et que toutes les têtes d’attention fonctionnent en parallèle. Ainsi, l'entraînement est beaucoup plus efficace. Pour apprendre, d'ailleurs, le modèle lit tout Shakespeare, mot après mot, et doit prédire le suivant. Chaque fois qu’il se trompe, on le punit gentiment grâce à une fonction de perte appelée cross-entropy :
 
 <p>$$
 \mathcal{L}
