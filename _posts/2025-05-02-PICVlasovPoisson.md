@@ -29,7 +29,7 @@ Mais résoudre ces équations à la main est un peu long, on utilise des ordinat
 
 1. On leur demande gentiment de déposer leur masse sur une grille.
 
-2. On calcule le potentiel gravitationnel avec une **FFT** (Fast Fourier Transform, pour les intimes).  
+2. On calcule le potentiel gravitationnel avec une FFT (Fast Fourier Transform, pour les intimes).  
 
 3. On en déduit un champ de gravitation, qu’on applique aux particules.  
 
