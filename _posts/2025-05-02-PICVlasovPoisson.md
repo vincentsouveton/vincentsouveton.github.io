@@ -25,7 +25,7 @@ $$
 
 Là encore, rien de bien méchant : si la densité de matière est un peu trop élevée quelque part, alors hop, la gravité tire tout le monde vers ce coin, comme une soirée où il reste encore des chips. Et ainsi l’univers s’organise.
 
-Résoudre ces équations à la main est un peu long, on utilise donc des ordinateurs. On leur confie des centaines, des milliers, des millions, des milliards (selon notre envie mais surtout selon le budget de notre université) de particules fictives et on les regarde évoluer sur une grille numérique. C’est ce qu’on appelle la méthode Particle-In-Cell, ou PIC pour les gens pressés (et les amateurs de sigles mystérieux). Le principe est simple. On commence par placer des particules dans un cube (virtuel, mais très sérieux), puis :
+Résoudre ces équations à la main est un peu long, on utilise donc des ordinateurs. On leur confie des centaines, des milliers, des millions, des milliards (selon notre envie mais surtout selon le budget de notre université) de particules fictives et on les regarde évoluer sur une grille numérique. C’est ce qu’on appelle la méthode Particle-In-Cell, ou PIC pour les gens pressés (et les amateurs de sigles mystérieux). Le principe est simple. On commence par placer les particules dans un cube (virtuel, mais très sérieux), puis :
 
 1. On leur demande gentiment de déposer leur masse sur une grille.
 
