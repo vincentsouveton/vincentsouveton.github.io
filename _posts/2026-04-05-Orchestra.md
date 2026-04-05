@@ -21,6 +21,6 @@ Un cor sonna et tout s’effondra. Chalamax se réveilla, toujours debout. Il av
 ---
 
 ## Références
-- Sohl-Dickstein, Weiss, Maheswaranathan, Ganguli (2015), *Deep Unsupervised Learning using Nonequilibrium Thermodynamics*, ICML, 2015
+- Sohl-Dickstein, Weiss, Maheswaranathan, Ganguli, *Deep Unsupervised Learning using Nonequilibrium Thermodynamics*, ICML, 2015
 - Ho, Jain, Abbeel, *Denoising diffusion probabilistic models*, NeurIPS, 2020
 - Vidéo YouTube : [But how do AI images and videos actually work?](https://www.youtube.com/watch?v=iv-5mZ_9CPY)
