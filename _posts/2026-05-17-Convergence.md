@@ -2,7 +2,6 @@
 layout: post
 title: Convergence
 date: 2026-05-17
-description: Convergence
 tags:
 categories:
 ---

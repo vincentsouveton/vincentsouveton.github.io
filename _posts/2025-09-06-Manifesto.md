@@ -2,7 +2,6 @@
 layout: post
 title: Un manifeste anti-utilitariste
 date: 2025-09-06
-description: ou comment perdre son temps de façon hautement productive
 tags:
 categories:
 ---

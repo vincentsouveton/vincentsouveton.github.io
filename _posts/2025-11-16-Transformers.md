@@ -2,7 +2,6 @@
 layout: post
 title: Piéger Shakespeare sur une GPU
 date: 2025-11-16
-description: Transformer model
 tags:
 categories:
 ---

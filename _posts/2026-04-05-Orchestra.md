@@ -2,7 +2,6 @@
 layout: post
 title: Diffusion métallique
 date: 2026-04-05
-description: Metal diffusion
 tags:
 categories:
 ---
