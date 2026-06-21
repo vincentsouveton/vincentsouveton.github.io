@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Le Théorème et la Librairie
+title: Le Théorème et la Bibliothèque
 date: 2026-06-21
 tags:
 categories:
