@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Le Théorème et la Librairie
-date: 2026-05-17
+date: 2026-06-21
 tags:
 categories:
 ---
@@ -12,7 +12,7 @@ Barnabé occupait depuis 30 ans un poste de maître de conférences à l’unive
 
 Le problème était que Barnabé ne savait pas comment aborder le problème. Il créa un nouveau document texte sur lequel il écrivit « Démonstration ». Il attendit mais rien ne se produisit. Au bout de vingt minutes, il ajouta : « Supposons que… ». Cette avancée lui parut trop téméraire et il effaça. Il consulta ensuite trois articles récents dont il ne comprit que les remerciements, puis une biographie de Riemann, puis une autre, plus courte, puis l’article Wikipédia... Toujours rien. Alors, puisque c’était après tout son métier, Barnabé eut une idée.
 
-Le regard perdu dans les étagères de son bureau, il songea à Borges. Dans sa *Bibliothèque de Babel*, l'auteur argentin décrit une construction imaginaire qui contient tous les livres composés de toutes les combinaisons possibles de caractères. La propriété fondamentale de la Bibliothèque est qu'on peut y trouver absolument tout ce qu’il est possible d’exprimer avec avec du texte, éventuellement répartis sur plusieurs volumes. Bien évidemment, la majorité de son contenu ressemble à un fichier corrompu mais la Bibliothèque abrite également les textes sacrés, le dernier catalogue IKEA ainsi que le menu de la cantine universitaire du 14 mars 2472. Surtout, la Bibliothèque contient la réponse à l'hypothèse de Riemann, ainsi que sa démonstration.
+Le regard perdu dans les étagères de son bureau, il songea à Borges. Dans sa *Bibliothèque de Babel*, l'auteur argentin décrit une construction imaginaire qui contient tous les livres composés de toutes les combinaisons possibles de caractères. La propriété fondamentale de la Bibliothèque est qu'on peut y trouver absolument tout ce qu’il est possible d’exprimer avec avec du texte, éventuellement réparti sur plusieurs volumes. Bien évidemment, la majorité de son contenu ressemble à un fichier corrompu mais la Bibliothèque abrite également les textes sacrés, le dernier catalogue IKEA ainsi que le menu de la cantine universitaire du 14 mars 2472. Surtout, la Bibliothèque contient la réponse à l'hypothèse de Riemann, ainsi que sa démonstration.
 
 Enthousiasmé par l'élégance du procédé, Barnabé commença par construire une simulation informatique de la Bibliothèque. Évidemment, cette dernière contenant plus de caractères qu'il n'y a d'atomes dans l'univers, le programme ne la construisait pas d'un coup. À partir de coordonnées, il reconstruisait localement un fragment de la Bibliothèque, le rendait consultable, puis le supprimait une fois la lecture terminée. Un second programme, appelé *Explorateur*, parcourait aléatoirement ces régions virtuelles et stockait le contenu visité. Enfin, une petite IA, nommée *Sélectionneuse*, entraînée sur le serveur de pré-publications arXiV, avait pour rôle de ne retenir, parmi les textes recueillis, que ceux qui ressemblaient à une démonstration mathématique. Dès lors, la vie de Barnabé ressembla à un jour sans fin.
 
