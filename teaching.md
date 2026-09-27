@@ -3,6 +3,10 @@ layout: page
 title: "Teaching"
 ---
 
+## Machine Learning
+
+*En construction...*
+
 ## Université Clermont Auvergne (2021-2024)
 
 ### Mathématiques S2 (L1 Maths)

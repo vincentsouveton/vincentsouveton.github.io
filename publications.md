@@ -3,6 +3,7 @@ layout: page
 title: "Publications"
 ---
 
+- V. Souveton. Riemannian Neural Hamiltonian Flows: Geodesic Symplectic Transport and Interpretability. *arXiv preprint arXiv:2609.21647*, 2026.
 - P. Sochala, V. Souveton, and S. Terrana. Statistically-informed surrogate models combining linear dimension reduction and neural networks for blast wave propagation. *Journal of Computational Science*, 96:102857, 2026.
 - S. Terrana, P. Sochala, R. Leconte, and V. Souveton. Blast-terrain interactions : fast-running predictions and statistical analysis. In *27th International Symposium on Military Aspects of Blast and Shock (MABS 27)*, 2025.
 - V. Souveton, and S. Terrana. Hamiltonian normalizing flows as kinetic PDE solvers: Application to the 1D Vlasov-Poisson equations. In *Proceedings of the 2nd ECAI Workshop on "Machine Learning Meets Differential Equations: From Theory to Applications"*, PMLR 277:133-146, 2025.
