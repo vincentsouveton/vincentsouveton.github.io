@@ -1,0 +1,11 @@
+---
+title: Code
+label: Open source
+intro: Public repositories on [github.com/vincentsouveton](https://github.com/vincentsouveton/).
+---
+{% comment %} The list itself lives in _data/repos.yml {% endcomment %}
+<ul class="repos">
+{% for repo in site.data.repos %}
+  <li class="repo"><a href="{{ repo.url }}">{{ repo.name }}</a><p>{{ repo.description }}</p></li>
+{% endfor %}
+</ul>

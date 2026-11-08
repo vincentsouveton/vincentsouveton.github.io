@@ -1,0 +1,76 @@
+# Content of the CV page.
+# Text fields accept Markdown: *italic*, **bold**, [link](https://...).
+
+timeline:
+  - when: "2026 – now"
+    title: Starting Research Position
+    kind: Position
+    current: true          # gold marker on the timeline
+    org: "Inria, [Atlantis team](http://www-sop.inria.fr/atlantis/), Université Côte d'Azur"
+    items:
+      - "Neural operators for Maxwell's equations."
+
+  - when: "2024 – 2026"
+    title: Postdoctoral researcher
+    kind: Position
+    org: "CEA (French Alternative Energies and Atomic Energy Commission)"
+    items:
+      - "Machine learning for fast computation of blast waves and simulation of complex systems."
+      - "Probabilistic models, dimension reduction, uncertainty quantification, neural ODEs."
+      - "Datasets and CFD simulations on an HPC cluster."
+      - "Created and organised the lab's seminar for PhD students and postdocs."
+
+  - when: "2021 – 2024"
+    title: PhD in Applied Mathematics
+    kind: Education
+    org: "Laboratoire de Mathématiques Blaise Pascal, Université Clermont Auvergne"
+    items:
+      - "Thesis: *Non-reversible and generative sampling algorithms. Application to the inference of cosmological parameters.*"
+      - "Member of the Aquila consortium."
+      - "Tutorials for first-year science students (see [Teaching](teaching.html))."
+      - "Elected PhD representative at the Doctoral School (2022–2023); organised the lab's PhD and postdoc seminar for two years."
+
+  - when: "Jan – Jun 2021"
+    title: Master's research internship
+    kind: Research
+    org: "Université Clermont Auvergne"
+    items:
+      - "Applied mathematics and cosmology: convexity analysis of a sampling problem. *Mathematical aspects in statistical inference of initial cosmological parameters through forward modeling.*"
+
+  - when: "2019 – 2021"
+    title: MSc in Mathematics
+    kind: Education
+    org: "Université Clermont Auvergne"
+    items:
+      - "Fundamental and applied mathematics, specialisation in partial differential equations."
+      - "First-year thesis: *Holomorphic functions on the disk and Aleksandrov–Clark measures.*"
+
+talks:
+  - when: Mar 2026
+    title: Conformalized ensemble of neural networks for blast wave propagation.
+    where: SIAM UQ, Minneapolis
+  - when: Oct 2025
+    title: Hamiltonian normalizing flows as kinetic equation solvers.
+    where: ECAI workshop, Bologna
+  - when: May 2024
+    title: Fixed-kinetic NHF for enhanced interpretability and reduced complexity.
+    where: AISTATS poster, Valencia
+  - when: Sep 2023
+    title: Sampling with Neural Hamiltonian Flows.
+    where: Institut Pascal workshop, Paris area
+  - when: Nov 2021
+    title: Inferring the initial conditions of the Universe.
+    where: Oskar Klein Centre, Stockholm
+
+outreach:
+  - when: Apr 2024
+    title: "\"Moteur de recherche\", Radio Campus Clermont-Ferrand: my PhD research on air."
+  - when: Nov 2023
+    title: Algorithms for inferring the initial conditions of the Universe.
+    where: Le Puy de la Recherche, public colloquium
+
+skills:
+  - label: Code
+    value: Python, PyTorch, Julia, LaTeX
+  - label: Languages
+    value: French (native), English (professional), Spanish (basic)

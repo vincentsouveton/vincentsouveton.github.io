@@ -1,0 +1,60 @@
+# Publications, most recent first. They are grouped by `year` on the page.
+# type: Preprint | Journal | Conference | Workshop | Thesis   (free text)
+# Your name (site.author.short in _config.yml) is put in bold automatically.
+
+- year: 2026
+  type: Preprint
+  title: "Riemannian Neural Hamiltonian Flows: Geodesic Symplectic Transport and Interpretability"
+  authors: "V. Souveton"
+  venue: "arXiv preprint arXiv:2609.21647"
+  links:
+    - label: arXiv
+      url: https://arxiv.org/abs/2609.21647
+    - label: Code
+      url: https://github.com/vincentsouveton/RiemannianNHF
+
+- year: 2026
+  type: Journal
+  title: "Statistically-informed surrogate models combining linear dimension reduction and neural networks for blast wave propagation"
+  authors: "P. Sochala, V. Souveton, S. Terrana"
+  venue: "Journal of Computational Science, 96:102857"
+  links:
+    - label: DOI
+      url: https://doi.org/10.1016/j.jocs.2026.102857
+
+- year: 2025
+  type: Workshop
+  title: "Hamiltonian normalizing flows as kinetic PDE solvers: Application to the 1D Vlasov–Poisson equations"
+  authors: "V. Souveton, S. Terrana"
+  venue: "2nd ECAI Workshop \"Machine Learning Meets Differential Equations\", PMLR 277:133–146"
+  links:
+    - label: PMLR
+      url: https://proceedings.mlr.press/v277/souveton25a.html
+    - label: Code
+      url: https://github.com/vincentsouveton/PDE-NHF
+
+- year: 2025
+  type: Conference
+  title: "Blast-terrain interactions: fast-running predictions and statistical analysis"
+  authors: "S. Terrana, P. Sochala, R. Leconte, V. Souveton"
+  venue: "27th International Symposium on Military Aspects of Blast and Shock (MABS 27)"
+
+- year: 2024
+  type: Thesis
+  title: "Non-reversible and generative sampling algorithms: Application to the inference of cosmological parameters"
+  authors: "V. Souveton"
+  venue: "PhD thesis, Université Clermont Auvergne"
+  links:
+    - label: HAL
+      url: https://theses.hal.science/tel-04779691
+
+- year: 2024
+  type: Conference
+  title: "Fixed-kinetic neural Hamiltonian flows for enhanced interpretability and reduced complexity"
+  authors: "V. Souveton, A. Guillin, J. Jasche, G. Lavaux, M. Michel"
+  venue: "AISTATS 2024, PMLR 238:3178–3186"
+  links:
+    - label: PMLR
+      url: https://proceedings.mlr.press/v238/souveton24a.html
+    - label: PDF
+      url: https://proceedings.mlr.press/v238/souveton24a/souveton24a.pdf

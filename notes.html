@@ -1,0 +1,19 @@
+---
+title: Notes
+label: Notes
+intro: Short notes on the ideas that guide my work.
+---
+{% comment %} Notes are the Markdown files in the _notes folder. {% endcomment %}
+{% assign notes = site.notes | sort: "date" | reverse %}
+<div class="list">
+{% assign now = site.time | date: "%s" | plus: 0 %}
+{% for note in notes %}
+  {% assign note_time = note.date | date: "%s" | plus: 0 %}
+  {% if note_time > now %}{% continue %}{% endif %}{% comment %} future-dated notes stay hidden {% endcomment %}
+  <a class="note-item" href="{{ note.url | relative_url }}">
+    <span class="m"><span class="mono">{{ note.date | date: "%b %Y" }}</span>{% for tag in note.tags %}<span class="tag">{{ tag }}</span>{% endfor %}</span>
+    <span class="t">{{ note.title }}</span>
+    {% if note.summary %}<span class="a">{{ note.summary }}</span>{% endif %}
+  </a>
+{% endfor %}
+</div>

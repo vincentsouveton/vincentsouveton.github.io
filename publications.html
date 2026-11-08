@@ -1,0 +1,21 @@
+---
+title: Publications
+label: Research
+intro: Preprints, papers and my PhD thesis, most recent first.
+---
+{% comment %} The list itself lives in _data/publications.yml {% endcomment %}
+{% assign years = site.data.publications | group_by: "year" %}
+{% for year in years %}
+<div class="year">{{ year.name }}</div>
+{% for pub in year.items %}
+<div class="pub">
+  <div class="ttl">{{ pub.title }}</div>
+  <div class="au">{{ pub.authors | replace: site.author.short, '<b>__ME__</b>' | replace: '__ME__', site.author.short }}</div>
+  <div class="venue">{{ pub.venue }}</div>
+  <div class="meta">
+    <span class="tag{% if pub.type == 'Preprint' %} gold{% endif %}">{{ pub.type }}</span>
+    {% for link in pub.links %}<a class="lk" href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+  </div>
+</div>
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------
+#  Site settings — edit the values below, then commit.
+#  (Changes to this file need a rebuild: GitHub does it on push;
+#   locally, restart `bundle exec jekyll serve`.)
+# ---------------------------------------------------------------
+
+title: Vincent Souveton
+description: >-
+  Researcher in scientific machine learning.
+url: "https://vincentsouveton.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Vincent Souveton
+  short: V. Souveton            # highlighted in bold in author lists
+  position: Starting Research Position
+  affiliation: Inria, Atlantis team
+  affiliation_url: http://www-sop.inria.fr/atlantis/
+  location: Université Côte d'Azur, Sophia Antipolis
+  github: vincentsouveton
+  # The e-mail address is split on purpose: it never appears in full in
+  # the generated pages. The "Email" button rebuilds it when clicked.
+  email_user: vsouveton0
+  email_domain: gmail.com
+
+footer_note: Site design assisted by AI (Claude, Anthropic)
+
+# Menu: order and labels of the links in the header
+navigation:
+  - title: Home
+    url: /
+  - title: Publications
+    url: /publications.html
+  - title: Code
+    url: /code.html
+  - title: Notes
+    url: /notes.html
+  - title: CV
+    url: /cv.html
+  - title: Teaching
+    url: /teaching.html
+
+# ---------------------------------------------------------------
+#  Build settings — no need to touch these.
+# ---------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax   # turns $$...$$ into MathJax-ready math
+  hard_wrap: false
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache

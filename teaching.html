@@ -1,0 +1,39 @@
+---
+title: Teaching
+label: Teaching
+intro: Courses and tutorials, with exercise sheets, exams and solutions.
+---
+{% comment %} The courses live in _data/teaching.yml; the PDFs in assets/cours/ {% endcomment %}
+{% for course in site.data.teaching %}
+<div class="course">
+  <div class="course-head">
+    <h3>{{ course.title }}</h3>
+    {% if course.status %}<span class="tag gold">{{ course.status }}</span>{% elsif course.level %}<span class="mono muted">{{ course.level }}</span>{% endif %}
+  </div>
+  {% if course.institution %}<p class="credit">{{ course.institution }}</p>{% endif %}
+  {% if course.topics %}<p class="topics">{{ course.topics }}</p>{% endif %}
+  {% if course.rows %}
+  <div class="tbl-wrap">
+    <table class="docs">
+      <thead><tr>{% for col in course.columns %}<th>{{ col }}</th>{% endfor %}</tr></thead>
+      <tbody>
+      {% for row in course.rows %}
+        <tr>
+          <td>{{ row.label }}</td>
+          {% assign ncols = course.columns | size | minus: 1 %}
+          {% for cell in row.cells %}
+          <td{% if row.span %} colspan="{{ ncols }}"{% endif %}>
+            {% if cell.size > 0 %}
+            <div class="pills">{% for doc in cell %}<a href="{{ '/assets/cours/' | append: doc.file | relative_url }}">{{ doc.label }}</a>{% endfor %}{% if forloop.last and row.note %}<span class="muted small">{{ row.note }}</span>{% endif %}</div>
+            {% else %}<span class="muted">–</span>{% endif %}
+          </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+  {% if course.credit %}<p class="credit">{{ course.credit | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>{% endif %}
+</div>
+{% endfor %}

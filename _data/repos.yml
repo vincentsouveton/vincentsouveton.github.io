@@ -1,0 +1,18 @@
+# Repositories shown on the Code page, in this order.
+# Copy the name and description from GitHub.
+
+- name: RiemannianNHF
+  url: https://github.com/vincentsouveton/RiemannianNHF
+  description: "Official implementation of the Riemannien Neural Hamiltonian Flows paper (Souveton, 2026)"
+
+- name: ConfEnsProbNN
+  url: https://github.com/vincentsouveton/ConfEnsProbNN
+  description: "Official repository for the paper \"Conformalized Ensemble of Probabilistic Neural Networks for Blast Wave Propagation\". Co-authored with P. Sochala and S. Terrana."
+
+- name: nanotensorlab
+  url: https://github.com/vincentsouveton/nanotensorlab
+  description: "A minimalist lab for neural sampling and regression"
+
+- name: PDE-NHF
+  url: https://github.com/vincentsouveton/PDE-NHF
+  description: "Official implementation of PDE-NHF, a Normalizing Flows model for integrating Hamiltonian kinetic equations."

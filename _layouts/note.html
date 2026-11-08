@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="note">
+  <a class="back" href="{{ '/notes.html' | relative_url }}">← All notes</a>
+  <h1>{{ page.title }}</h1>
+  <p class="note-meta">
+    <span class="mono">{{ page.date | date: "%b %Y" }}</span>
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </p>
+  {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+
+  {{ content }}
+
+  {% if page.references %}
+  <h2 id="references">References</h2>
+  <ol class="refs">
+    {% for ref in page.references %}
+    <li id="ref-{{ forloop.index }}">
+      {{ ref.authors }}. {{ ref.title }}. {% if ref.venue %}<span class="src">{{ ref.venue }}.</span>{% endif %}
+      {% for link in ref.links %}<a href="{{ link.url }}">{{ link.label }}</a> {% endfor %}
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</article>

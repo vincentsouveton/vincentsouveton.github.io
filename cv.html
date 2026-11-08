@@ -1,0 +1,44 @@
+---
+title: CV
+label: Curriculum vitae
+intro: My path since the Master's degree. A full CV is available on request.
+---
+{% comment %} The content itself lives in _data/cv.yml {% endcomment %}
+{% assign cv = site.data.cv %}
+<div class="tl">
+{% for item in cv.timeline %}
+  <div class="tl-item{% if item.current %} now{% endif %}">
+    <span class="when">{{ item.when }}</span>
+    <div class="what">
+      <h3>{{ item.title }} {% if item.kind %}<span class="tag kind{% if item.current %} gold{% endif %}">{{ item.kind }}</span>{% endif %}</h3>
+      <div class="org">{{ item.org | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+      {% if item.items %}<ul>{% for line in item.items %}<li>{{ line | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+<section>
+  <h2>Selected talks</h2>
+  <ul class="list">
+  {% for t in cv.talks %}
+    <li class="row"><span class="when">{{ t.when }}</span><div class="what">{{ t.title }} {% if t.where %}<span class="muted">{{ t.where }}</span>{% endif %}</div></li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Outreach</h2>
+  <ul class="list">
+  {% for t in cv.outreach %}
+    <li class="row"><span class="when">{{ t.when }}</span><div class="what">{{ t.title }} {% if t.where %}<span class="muted">{{ t.where }}</span>{% endif %}</div></li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="kv">
+  {% for s in cv.skills %}<dt>{{ s.label }}</dt><dd>{{ s.value }}</dd>{% endfor %}
+  </dl>
+</section>

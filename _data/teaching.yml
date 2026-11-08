@@ -1,0 +1,78 @@
+# Courses on the Teaching page, in this order.
+#
+# A course can be just a title + status (see Machine Learning), or a table:
+#   columns: header labels; the first column holds each row's `label`.
+#   rows:    each row has a `label` and a list of `cells` (one per remaining
+#            column). A cell is a list of documents {label, file};
+#            an empty list [] shows a dash.
+#            `span: true` makes a row's single cell span all columns.
+#            `note:` adds a small grey remark after the last cell.
+#   file:    path inside assets/cours/ (put the PDF there).
+
+- title: Machine Learning
+  status: In preparation
+  topics: Course material in preparation.
+
+- title: Mathematics S2
+  level: 1st-year BSc Mathematics · 2021–2024
+  institution: Université Clermont Auvergne · documents in French
+  topics: Asymptotic analysis and Taylor expansions · Vector spaces · Linear maps · Sequences
+  columns: [Year, Exercise sheets, Exams, Quizzes]
+  rows:
+    - label: 2023–24
+      cells:
+        - - { label: Sheet 1, file: maths2/MathsS2_2324_TD1.pdf }
+          - { label: Sheet 2, file: maths2/MathsS2_2324_TD2.pdf }
+          - { label: Sheet 3, file: maths2/MathsS2_2324_TD3.pdf }
+          - { label: Sheet 4, file: maths2/MathsS2_2324_TD4.pdf }
+        - - { label: Midterm, file: maths2/MathsS2_2324_EI.pdf }
+          - { label: Final, file: maths2/MathsS2_2324_ET.pdf }
+        - - { label: Q1, file: maths2/MathsS2_2324_CC1.pdf }
+          - { label: Q1b, file: maths2/MathsS2_2324_CC1_bis.pdf }
+          - { label: Q2, file: maths2/MathsS2_2324_CC2.pdf }
+          - { label: Q2b, file: maths2/MathsS2_2324_CC2_bis.pdf }
+          - { label: Q3, file: maths2/MathsS2_2324_CC3.pdf }
+          - { label: Q3b, file: maths2/MathsS2_2324_CC3_bis.pdf }
+    - label: 2022–23
+      cells:
+        - []
+        - - { label: Midterm, file: maths2/MathsS2_2223_EI.pdf }
+          - { label: Final, file: maths2/MathsS2_2223_ET.pdf }
+        - - { label: Q1, file: maths2/MathsS2_2223_CC1.pdf }
+          - { label: Q1b, file: maths2/MathsS2_2223_CC1bis.pdf }
+          - { label: Q2, file: maths2/MathsS2_2223_CC2.pdf }
+          - { label: Q2b, file: maths2/MathsS2_2223_CC2bis.pdf }
+          - { label: Q3, file: maths2/MathsS2_2223_CC3.pdf }
+    - label: 2021–22
+      note: questions only
+      cells:
+        - []
+        - - { label: Midterm, file: maths2/EI-2021-22.pdf }
+          - { label: Final, file: maths2/ET-2021-22.pdf }
+        - - { label: Q1, file: maths2/cc1.pdf }
+          - { label: Q2, file: maths2/cc2.pdf }
+          - { label: Q3, file: maths2/cc3.pdf }
+  credit: Solutions written with Julian Le Clainche.
+
+- title: Mathematical Tools 2
+  level: 1st-year BSc Science · 2021–2024
+  institution: Université Clermont Auvergne · documents in French
+  topics: Reasoning, sets and counting, or matrices and linear systems · Differential equations · Functions of several variables
+  columns: [Track, 27 Apr 2021, 11 May 2021, 16 Jun 2021]
+  rows:
+    - label: Maths track
+      cells:
+        - - { label: Exam, file: om2/270421Maths.pdf }
+        - - { label: Exam, file: om2/110521Maths.pdf }
+        - - { label: Exam, file: om2/160621Maths.pdf }
+    - label: Other tracks
+      cells:
+        - - { label: Exam, file: om2/270421NoMaths.pdf }
+        - - { label: Exam, file: om2/110521NoMaths.pdf }
+        - - { label: Exam, file: om2/160621NoMaths.pdf }
+    - label: Notes
+      span: true
+      cells:
+        - - { label: Differential equations, file: om2/NotesEquaDiffs.pdf }
+          - { label: Functions of several variables, file: om2/NotesFonctionsPlusieursVariables.pdf }
+  credit: "Solutions written with [Sue Claret](https://sites.google.com/view/web-page-of-sue-claret/), Léo Hahn Lecler, Clément Legrand and [Emilien Zabeth](https://sites.google.com/view/emilienzabeth/home)."
