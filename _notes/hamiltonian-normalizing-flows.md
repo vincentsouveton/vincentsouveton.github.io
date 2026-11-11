@@ -4,7 +4,7 @@ date: 2026-11-08
 tags: [normalizing flows, Hamiltonian dynamics, MCMC]
 summary: >-
   How to build an invertible neural map out of Hamiltonian dynamics, why the
-  Jacobian determinant disappears, how the idea extends to curved geometries,
+  Jacobian determinant disappears, how the idea extends to curved spaces such as the sphere,
   and how the result can make Hamiltonian Monte Carlo cheaper.
 references:
   - authors: D. J. Rezende, S. Mohamed
@@ -45,13 +45,21 @@ references:
     links:
       - { label: PMLR, url: "https://proceedings.mlr.press/v277/souveton25a.html" }
       - { label: code, url: "https://github.com/vincentsouveton/PDE-NHF" }
+  - authors: E. Mathieu, M. Nickel
+    title: Riemannian continuous normalizing flows
+    venue: NeurIPS, 2020
+    links: [{ label: "arXiv:2006.10605", url: "https://arxiv.org/abs/2006.10605" }]
   - authors: M. Girolami, B. Calderhead
     title: Riemann manifold Langevin and Hamiltonian Monte Carlo methods
     venue: J. R. Stat. Soc. B 73(2):123–214, 2011
     links: [{ label: RePEc, url: "https://econpapers.repec.org/RePEc:bla:jorssb:v:73:y:2011:i:2:p:123-214" }]
+  - authors: S. Byrne, M. Girolami
+    title: Geodesic Monte Carlo on embedded manifolds
+    venue: Scandinavian Journal of Statistics 40(4), 2013
+    links: [{ label: "arXiv:1301.6064", url: "https://arxiv.org/abs/1301.6064" }]
   - authors: V. Souveton
-    title: "Riemannian neural Hamiltonian flows: geodesic symplectic transport and interpretability"
-    venue: Preprint, 2026
+    title: "Riemannian Neural Hamiltonian Flows: From Interpretable Potentials to Exact Surrogate Sampling"
+    venue: arXiv preprint arXiv:2609.21647, 2026
     links:
       - { label: "arXiv:2609.21647", url: "https://arxiv.org/abs/2609.21647" }
       - { label: code, url: "https://github.com/vincentsouveton/RiemannianNHF" }
@@ -79,7 +87,7 @@ $$
 \log p_X(x) = \log p_Z(z) - \log \left| \det \frac{\partial f_\theta}{\partial z}(z) \right| .
 $$
 
-The determinant is the bill. For a generic map in dimension $$d$$ it costs $$\mathcal{O}(d^3)$$, so much of the work on flows goes into architectures that make it cheap: coupling layers, autoregressive maps, triangular Jacobians [[2]](#ref-2){:.cite}[[3]](#ref-3){:.cite}[[4]](#ref-4){:.cite}. Physics offers a different way out: use a map whose determinant is known to be exactly one.
+The determinant is the costly part. For a generic map in dimension $$d$$ it costs $$\mathcal{O}(d^3)$$, so much of the work on flows goes into architectures that make it cheap: coupling layers, autoregressive maps, triangular Jacobians [[2]](#ref-2){:.cite}[[3]](#ref-3){:.cite}[[4]](#ref-4){:.cite}. Physics offers a different way out: use a map whose determinant is known to be exactly one.
 
 ## 2. A particle in a landscape
 
@@ -119,7 +127,7 @@ p_{k+1} &= p_{k+1/2} - \tfrac{\varepsilon}{2}\, \nabla V(q_{k+1}).
 \end{aligned}
 $$
 
-Each line changes one variable by an amount that depends only on the other. Such a map is a *shear*: its Jacobian is block-triangular with identity blocks on the diagonal, so its determinant is exactly one. The inverse is the same scheme run with $$-\varepsilon$$. This is the integrator of Hamiltonian Monte Carlo [[5]](#ref-5){:.cite}.
+The determinant of this transformation is exactly one. The inverse is the same scheme run with $$-\varepsilon$$. This is the integrator of Hamiltonian Monte Carlo [[5]](#ref-5){:.cite}.
 
 A neural Hamiltonian flow (NHF) [[6]](#ref-6){:.cite} makes the potential, and possibly the kinetic energy, learnable. The recipe has three steps:
 
@@ -157,29 +165,37 @@ $$
 
 Two choices matter in practice. Toth et al. [[6]](#ref-6){:.cite} learn both $$V$$ and $$K$$; symmetries can also be built into the dynamics [[7]](#ref-7){:.cite}. In [[8]](#ref-8){:.cite} we fix $$K$$ to a quadratic form, which removes a network, reduces the number of parameters, and leaves $$V_\theta$$ as the only learned object, which makes it easier to interpret. The same structure also fits kinetic PDEs, whose characteristics are Hamiltonian: in [[9]](#ref-9){:.cite} we use it to solve the 1D Vlasov–Poisson system.
 
-## 4. Curving the space: the Riemannian case
+## 4. Curved spaces: the sphere and the hyperbolic plane
 
-A constant mass matrix gives the particle the same inertia everywhere. Many targets do not have one scale: a posterior can be narrow in one region and wide in another, or bend along a curved ridge. With a fixed $$M$$, the step size must suit the hardest region, and many leapfrog layers are needed.
+Some data do not live in a flat space. Directions on the globe or in the sky live on the sphere $$\mathbb{S}^2$$; hierarchical data fit naturally in the hyperbolic plane $$\mathbb{H}^2$$, often drawn as the Poincaré disk. Both have non-zero curvature (positive for the sphere, negative for the hyperbolic plane), so a Euclidean flow followed by a projection loses track of volumes. Riemannian continuous normalizing flows [[10]](#ref-10){:.cite} handle such spaces, but they integrate an ODE and need the divergence of a vector field along the way.
 
-The remedy, borrowed from Riemannian manifold HMC [[10]](#ref-10){:.cite}, is to let the mass depend on position through a metric $$G(q)$$, a symmetric positive-definite matrix field:
+Hamiltonian mechanics is geometric from the start, which makes it a natural fit. On a manifold $$\mathcal{M}$$ with metric $$g$$ (the matrix $$G(q)$$ in coordinates), the momentum $$p$$ is a covector at $$q$$ and the kinetic energy is given by the metric, as in Riemannian manifold HMC [[11]](#ref-11){:.cite}:
 
 $$
-H(q,p) = V(q) + \tfrac12 \log\det G(q) + \tfrac12\, p^\top G(q)^{-1} p .
+H(q,p) = \tfrac12\, p^\top G(q)^{-1} p + V_\theta(q).
 $$
 
-Where $$G$$ is large the particle is heavy and moves slowly; where $$G$$ is small it moves fast. The geometry adapts locally to the target. Without the potential terms, the trajectories of $$H = \tfrac12 p^\top G(q)^{-1} p$$ are the geodesics of $$G$$: the particle follows the straight lines of a curved space.
+The metric is not learned: it is the geometry of the space itself. As in the fixed-kinetic Euclidean case, the only learned object is the potential $$V_\theta$$. Without it, the particle follows geodesics: great circles on the sphere, arcs meeting the boundary at right angles in the Poincaré disk.
 
-The price is that $$H$$ no longer splits into a function of $$q$$ plus a function of $$p$$, so the explicit leapfrog no longer applies. The generalised leapfrog replaces it [[10]](#ref-10){:.cite}:
+The integrator splits the Hamiltonian into these two parts, as in geodesic Monte Carlo [[12]](#ref-12){:.cite}: a kick by the potential, an exact geodesic drift, and a second kick. With step size $$h$$:
 
 $$
 \begin{aligned}
-p_{k+1/2} &= p_k - \tfrac{\varepsilon}{2}\, \nabla_q H\big(q_k, p_{k+1/2}\big), \\
-q_{k+1} &= q_k + \tfrac{\varepsilon}{2} \Big[ \nabla_p H\big(q_k, p_{k+1/2}\big) + \nabla_p H\big(q_{k+1}, p_{k+1/2}\big) \Big], \\
-p_{k+1} &= p_{k+1/2} - \tfrac{\varepsilon}{2}\, \nabla_q H\big(q_{k+1}, p_{k+1/2}\big).
+p_{n+1/2} &= p_n - \tfrac{h}{2}\, dV_\theta(q_n), \\
+q_{n+1} &= \exp_{q_n}\!\big( h\, G(q_n)^{-1} p_{n+1/2} \big), \\
+p_{n+1} &= \Gamma_{q_n \to q_{n+1}}\, p_{n+1/2} - \tfrac{h}{2}\, dV_\theta(q_{n+1}),
 \end{aligned}
 $$
 
-The first two equations are implicit and are solved by a few fixed-point iterations. The scheme is still symplectic and reversible, so the determinant is still one and everything in section 3 carries over. What changes is what the network can learn: with a learnable metric $$G_\theta$$, the flow learns a geometry as well as a landscape, and the metric itself shows where the transport stretches or compresses space. This is the direction I study in [[11]](#ref-11){:.cite}.
+where $$\exp_q$$ is the exponential map (follow the geodesic leaving $$q$$) and $$\Gamma$$ parallel-transports the momentum along it. Just like the leapfrog scheme, the whole step is symplectic so that the Jacobian determinant disappears again. On $$\mathbb{S}^2$$ and $$\mathbb{H}^2$$ the exponential map and parallel transport have closed forms; spaces without closed-form geodesics would need approximate symplectic integrators.
+
+Training follows the "learning from data" case of section 3. The base draws positions from a simple density on the manifold (uniform on the sphere, a wrapped Gaussian on the hyperbolic plane) and momenta from a Gaussian $$\mathcal{N}_g(0, \sigma_p^2 I)$$ in the metric. A learned encoder $$q_\phi(p \mid q)$$ proposes momenta for each data point, and with $$(q_0,p_0) = \Phi_\theta^{-1}(q,p)$$ the lower bound reads
+
+$$
+\mathcal{L} = \mathbb{E}_{p \sim q_\phi(\cdot \mid q)} \Big[ \log \rho_0(q_0) + \log \mathcal{N}_g(p_0;\, 0, \sigma_p^2 I) - \log q_\phi(p \mid q) \Big].
+$$
+
+What I value most is that the learned potential can be read. A potential $$V$$ defines a profile $$\pi_V \propto e^{-V/\tau}$$ for a temperature $$\tau$$, and the matched potential $$V_\star = -\tau \log \rho_1$$ makes the target $$\rho_1$$ an equilibrium of the dynamics. Training does not force $$V_\theta = V_\star$$, but in practice the learned potential places its wells at the target modes. In the Gaussian case the flow is an exact rotation of phase space, which moves position information into momentum at a quarter period. On test problems on $$\mathbb{R}^2$$, $$\mathbb{H}^2$$ and $$\mathbb{S}^2$$, the model is competitive with a Riemannian continuous normalizing flow and cheaper per training step [[13]](#ref-13){:.cite}.
 
 ## 5. From flow to sampler: a surrogate for HMC
 
@@ -191,12 +207,12 @@ $$
 
 Every leapfrog step needs $$\nabla U$$. When $$\pi$$ involves an expensive forward model (a cosmological simulation, a PDE solve), these gradients dominate the cost.
 
-The surrogate idea [[12]](#ref-12){:.cite}[[13]](#ref-13){:.cite}[[14]](#ref-14){:.cite} is to run the trajectory with a cheap approximation $$\tilde U$$, and to keep the exact $$U$$ only in the acceptance step. This remains exact: the leapfrog map built on $$\tilde U$$ is still reversible and volume-preserving, so the Metropolis correction with the true $$H$$ leaves $$\pi$$ invariant. The surrogate only affects how often proposals are accepted. Each proposal then costs $$L$$ cheap gradients and a single evaluation of $$U$$. Li et al. [[14]](#ref-14){:.cite} use a neural network as the surrogate, which brings us directly to the flows above.
+The surrogate idea [[14]](#ref-14){:.cite}[[15]](#ref-15){:.cite}[[16]](#ref-16){:.cite} is to run the trajectory with a cheap approximation $$\tilde U$$, and to keep the exact $$U$$ only in the acceptance step. This remains exact: the leapfrog map built on $$\tilde U$$ is still reversible and volume-preserving, so the Metropolis correction with the true $$H$$ leaves $$\pi$$ invariant. The surrogate only affects how often proposals are accepted. Each proposal then costs $$L$$ cheap gradients and a single evaluation of $$U$$. Li et al. [[16]](#ref-16){:.cite} use a neural network as the surrogate, which brings us directly to the flows above.
 
-A trained Hamiltonian flow provides such a surrogate. With a fixed kinetic energy, its potential $$V_\theta$$ is a cheap, differentiable function, learned so that Hamiltonian dynamics carries mass towards $$\pi$$. Plugged into the proposal, it keeps the chain exact; the closer it is to $$U$$ up to a constant, the higher the acceptance rate. The Riemannian version could play the same role for Riemannian manifold HMC, where computing the metric is itself a large part of the cost.
+A trained Hamiltonian flow provides such a surrogate. With a fixed kinetic energy, its potential $$V_\theta$$ is a cheap, differentiable function, learned so that Hamiltonian dynamics carries mass towards $$\pi$$. Plugged into the proposal, it keeps the chain exact; the closer it is to $$U$$ up to a constant, the higher the acceptance rate. The geodesic leapfrog of section 4 is reversible and volume-preserving as well, so the same recipe could give a surrogate for HMC on the sphere or the hyperbolic plane, in the spirit of geodesic Monte Carlo [[12]](#ref-12){:.cite}.
 
-## 6. What I take from this
+## 6. What we can take from this
 
-Hamiltonian flows turn an engineering constraint (a cheap Jacobian) into a physical property (Liouville's theorem). What remains to learn has a meaning: a potential, and possibly a geometry. And because these flows use the same integrator as HMC, a model trained as a generator can be reused inside an exact sampler.
+Hamiltonian flows turn an engineering constraint (a cheap Jacobian) into a physical property (Liouville's theorem). What remains to learn has a meaning: a potential, whose wells show where the target puts its mass, on flat and curved spaces alike. Such learned interpretable potential then can be reused inside an exact gradient-based sampler.
 
 > Choose the dynamics so that the hard part of the computation vanishes, and spend the network's capacity on the physics.
