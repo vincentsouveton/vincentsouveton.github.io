@@ -15,9 +15,9 @@ author:
   name: Vincent Souveton
   short: V. Souveton            # highlighted in bold in author lists
   position: Starting Research Position
-  affiliation: Inria, Atlantis team
+  affiliation: Inria Université Côte d'Azur, Atlantis team
   affiliation_url: http://www-sop.inria.fr/atlantis/
-  location: Université Côte d'Azur, Sophia Antipolis
+  location: Sophia Antipolis
   github: vincentsouveton
   # The e-mail address is split on purpose: it never appears in full in
   # the generated pages. The "Email" button rebuilds it when clicked.

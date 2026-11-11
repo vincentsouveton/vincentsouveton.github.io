@@ -6,7 +6,7 @@ timeline:
     title: Starting Research Position
     kind: Position
     current: true          # gold marker on the timeline
-    org: "Inria, [Atlantis team](http://www-sop.inria.fr/atlantis/), Université Côte d'Azur"
+    org: "Inria Université Côte d'Azur, [Atlantis team](http://www-sop.inria.fr/atlantis/)"
     items:
       - "Neural operators for Maxwell's equations."
 

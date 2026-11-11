@@ -59,7 +59,7 @@ references:
     links: [{ label: "arXiv:1301.6064", url: "https://arxiv.org/abs/1301.6064" }]
   - authors: V. Souveton
     title: "Riemannian Neural Hamiltonian Flows: From Interpretable Potentials to Exact Surrogate Sampling"
-    venue: arXiv preprint arXiv:2609.21647, 2026
+    venue: Preprint, 2026
     links:
       - { label: "arXiv:2609.21647", url: "https://arxiv.org/abs/2609.21647" }
       - { label: code, url: "https://github.com/vincentsouveton/RiemannianNHF" }
@@ -195,7 +195,7 @@ $$
 \mathcal{L} = \mathbb{E}_{p \sim q_\phi(\cdot \mid q)} \Big[ \log \rho_0(q_0) + \log \mathcal{N}_g(p_0;\, 0, \sigma_p^2 I) - \log q_\phi(p \mid q) \Big].
 $$
 
-What I value most is that the learned potential can be read. A potential $$V$$ defines a profile $$\pi_V \propto e^{-V/\tau}$$ for a temperature $$\tau$$, and the matched potential $$V_\star = -\tau \log \rho_1$$ makes the target $$\rho_1$$ an equilibrium of the dynamics. Training does not force $$V_\theta = V_\star$$, but in practice the learned potential places its wells at the target modes. In the Gaussian case the flow is an exact rotation of phase space, which moves position information into momentum at a quarter period. On test problems on $$\mathbb{R}^2$$, $$\mathbb{H}^2$$ and $$\mathbb{S}^2$$, the model is competitive with a Riemannian continuous normalizing flow and cheaper per training step [[13]](#ref-13){:.cite}.
+What I value most is that the learned potential can be read. A potential $$V$$ defines a profile $$\pi_V \propto e^{-V/\tau}$$ for a temperature $$\tau=\sigma_p^2$$, and the matched potential $$V_\star = -\tau \log \rho_1$$ makes the target $$\rho_1$$ an equilibrium of the dynamics. Training does not force $$V_\theta = V_\star$$, but in practice the learned potential places its wells at the target modes. On test problems on $$\mathbb{R}^2$$, $$\mathbb{H}^2$$ and $$\mathbb{S}^2$$, the model is competitive with a Riemannian continuous normalizing flow [[13]](#ref-13){:.cite}.
 
 ## 5. From flow to sampler: a surrogate for HMC
 
