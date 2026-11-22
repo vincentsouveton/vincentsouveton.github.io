@@ -3,6 +3,21 @@
 # Your name (site.author.short in _config.yml) is put in bold automatically.
 
 - year: 2026
+  type: Journal
+  title: "Conformalized Ensemble of Probabilistic Neural Networks for Blast Wave Propagation"
+  authors: "V. Souveton, P. Sochala, S. Terrana"
+  venue: "Journal of Machine Learning for Modeling and Computing"
+  links:
+    - label: DOI
+      url: https://doi.org/10.1615/JMachLearnModelComput.2026066399
+
+- year: 2026
+  type: Conference
+  title: "Machine Learning Methods to Learn Height-of-Burst Effects on Blast Pressures and Uncertainties"
+  authors: "S. Terrana, V. Souveton"
+  venue: "20th International Symposium on Interaction of the Effects of Munitions with Structures (ISIEMS)"
+
+- year: 2026
   type: Preprint
   title: "Riemannian Neural Hamiltonian Flows: From Interpretable Potentials to Exact Surrogate Sampling"
   authors: "V. Souveton"
